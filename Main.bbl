@@ -1,0 +1,2901 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global}
+  \entry{ahmed2000effect}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=AE}{%
+         family={Ahmed},
+         familyi={A\bibinitperiod},
+         given={Elias},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=RJ}{%
+         family={Rose},
+         familyi={R\bibinitperiod},
+         given={Jonathan},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AERJ1}
+    \strng{fullhash}{AERJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the 2000 ACM/SIGDA eighth international
+  symposium on Field programmable gate arrays}
+    \field{pages}{3\bibrangedash 12}
+    \field{title}{The effect of LUT and cluster size on deep-submicron FPGA
+  performance and density}
+    \field{year}{2000}
+  \endentry
+
+  \entry{stratix2007stratix}{article}{}
+    \name{author}{1}{}{%
+      {{hash=SI}{%
+         family={Stratix},
+         familyi={S\bibinitperiod},
+         given={II},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SI1}
+    \strng{fullhash}{SI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Stratix II Device Handbook}
+    \field{volume}{1}
+    \field{journaltitle}{Altera Corporation}
+    \field{year}{2007}
+  \endentry
+
+  \entry{xilinxvirtex}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=XSJ}{%
+         family={Xilinx},
+         familyi={X\bibinitperiod},
+         given={San\bibnamedelima Jose},
+         giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{XSJ1}
+    \strng{fullhash}{XSJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{CA, Virtex-5 family overview, 2006}
+  \endentry
+
+  \entry{boutros2019math}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=BA}{%
+         family={Boutros},
+         familyi={B\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=EM}{%
+         family={Eldafrawy},
+         familyi={E\bibinitperiod},
+         given={Mohamed},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=YS}{%
+         family={Yazdanshenas},
+         familyi={Y\bibinitperiod},
+         given={Sadegh},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=BV}{%
+         family={Betz},
+         familyi={B\bibinitperiod},
+         given={Vaughn},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BA+1}
+    \strng{fullhash}{BAEMYSBV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the 2019 ACM/SIGDA International Symposium
+  on Field-Programmable Gate Arrays}
+    \field{pages}{94\bibrangedash 103}
+    \field{title}{Math doesn't have to be hard: Logic block architectures to
+  enhance low-precision multiply-accumulate on FPGAs}
+    \field{year}{2019}
+  \endentry
+
+  \entry{intel_agilex_2020}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=I}{%
+         family={{Intel Corporation}},
+         familyi={I\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Intel Corporation}%
+    }
+    \strng{namehash}{I1}
+    \strng{fullhash}{I1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{note}{Technical Product Brief}
+    \field{title}{{Agilex Device Overview}}
+    \field{year}{2020}
+  \endentry
+
+  \entry{xilinx_versal_trm_2021}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=X}{%
+         family={{Xilinx}},
+         familyi={X\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Xilinx Inc.}%
+    }
+    \strng{namehash}{X1}
+    \strng{fullhash}{X1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{note}{Technical Reference Manual}
+    \field{title}{{Versal Adaptive SoC Technical Reference Manual}}
+    \field{year}{2021}
+  \endentry
+
+  \entry{boutros2021fpga}{article}{}
+    \name{author}{2}{}{%
+      {{hash=BA}{%
+         family={Boutros},
+         familyi={B\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BV}{%
+         family={Betz},
+         familyi={B\bibinitperiod},
+         given={Vaughn},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{BABV1}
+    \strng{fullhash}{BABV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{4\bibrangedash 29}
+    \field{title}{FPGA architecture: Principles and progression}
+    \field{volume}{21}
+    \field{journaltitle}{IEEE Circuits and Systems Magazine}
+    \field{year}{2021}
+  \endentry
+
+  \entry{rose2012vtr}{inproceedings}{}
+    \name{author}{9}{}{%
+      {{hash=RJ}{%
+         family={Rose},
+         familyi={R\bibinitperiod},
+         given={Jonathan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LJ}{%
+         family={Luu},
+         familyi={L\bibinitperiod},
+         given={Jason},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=YCW}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={Chi\bibnamedelima Wai},
+         giveni={C\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=DO}{%
+         family={Densmore},
+         familyi={D\bibinitperiod},
+         given={Opal},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=GJ}{%
+         family={Goeders},
+         familyi={G\bibinitperiod},
+         given={Jeffrey},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={Somerville},
+         familyi={S\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KKB}{%
+         family={Kent},
+         familyi={K\bibinitperiod},
+         given={Kenneth\bibnamedelima B},
+         giveni={K\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=JP}{%
+         family={Jamieson},
+         familyi={J\bibinitperiod},
+         given={Peter},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=AJ}{%
+         family={Anderson},
+         familyi={A\bibinitperiod},
+         given={Jason},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RJ+1}
+    \strng{fullhash}{RJLJYCWDOGJSAKKBJPAJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the ACM/SIGDA international symposium on
+  Field Programmable Gate Arrays}
+    \field{pages}{77\bibrangedash 86}
+    \field{title}{The VTR project: architecture and CAD for FPGAs from verilog
+  to routing}
+    \field{year}{2012}
+  \endentry
+
+  \entry{yang1991logic}{book}{}
+    \name{author}{1}{}{%
+      {{hash=YS}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Saeyang},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Citeseer}%
+    }
+    \strng{namehash}{YS1}
+    \strng{fullhash}{YS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Logic synthesis and optimization benchmarks user guide:
+  version 3.0}
+    \field{year}{1991}
+  \endentry
+
+  \entry{intel_stratix10_2019}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=I}{%
+         family={{Intel Corporation}},
+         familyi={I\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Intel Corporation}%
+    }
+    \strng{namehash}{I1}
+    \strng{fullhash}{I1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{note}{Technical Product Brief}
+    \field{title}{{Stratix 10 Device Datasheet}}
+    \field{year}{2019}
+  \endentry
+
+  \entry{pca_architecture-1}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KUA}{%
+         family={Korat},
+         familyi={K\bibinitperiod},
+         given={Uday\bibnamedelima A},
+         giveni={U\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=AA}{%
+         family={Alimohammad},
+         familyi={A\bibinitperiod},
+         given={Amirhossein},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{KUAAA1}
+    \strng{fullhash}{KUAAA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{2097\bibrangedash 2113}
+    \field{title}{A reconfigurable hardware architecture for principal
+  component analysis}
+    \field{volume}{38}
+    \field{journaltitle}{Circuits, Systems, and Signal Processing}
+    \field{year}{2019}
+  \endentry
+
+  \entry{pca_architecture-2}{article}{}
+    \name{author}{4}{}{%
+      {{hash=FD}{%
+         family={Fernandez},
+         familyi={F\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=GC}{%
+         family={Gonzalez},
+         familyi={G\bibinitperiod},
+         given={Carlos},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=MD}{%
+         family={Mozos},
+         familyi={M\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=LS}{%
+         family={Lopez},
+         familyi={L\bibinitperiod},
+         given={Sebastian},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{FD+1}
+    \strng{fullhash}{FDGCMDLS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{1395\bibrangedash 1406}
+    \field{title}{FPGA implementation of the principal component analysis
+  algorithm for dimensionality reduction of hyperspectral images}
+    \field{volume}{16}
+    \field{journaltitle}{Journal of Real-Time Image Processing}
+    \field{year}{2019}
+  \endentry
+
+  \entry{pca_architecture-3}{article}{}
+    \name{author}{2}{}{%
+      {{hash=MMA}{%
+         family={Mansoori},
+         familyi={M\bibinitperiod},
+         given={Mohammad\bibnamedelima Amir},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=CMR}{%
+         family={Casu},
+         familyi={C\bibinitperiod},
+         given={Mario\bibnamedelima R},
+         giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {MDPI}%
+    }
+    \strng{namehash}{MMACMR1}
+    \strng{fullhash}{MMACMR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{3}
+    \field{pages}{449}
+    \field{title}{High level design of a flexible PCA hardware accelerator
+  using a new block-streaming method}
+    \field{volume}{9}
+    \field{journaltitle}{Electronics}
+    \field{year}{2020}
+  \endentry
+
+  \entry{pca_architecture-4}{article}{}
+    \name{author}{5}{}{%
+      {{hash=DA}{%
+         family={Das},
+         familyi={D\bibinitperiod},
+         given={Abhishek},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=ND}{%
+         family={Nguyen},
+         familyi={N\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=ZJ}{%
+         family={Zambreno},
+         familyi={Z\bibinitperiod},
+         given={Joseph},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=MG}{%
+         family={Memik},
+         familyi={M\bibinitperiod},
+         given={Gokhan},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Choudhary},
+         familyi={C\bibinitperiod},
+         given={Alok},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{DA+1}
+    \strng{fullhash}{DANDZJMGCA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{118\bibrangedash 132}
+    \field{title}{An FPGA-based network intrusion detection architecture}
+    \field{volume}{3}
+    \field{journaltitle}{IEEE Transactions on Information Forensics and
+  Security}
+    \field{year}{2008}
+  \endentry
+
+  \entry{pca_architecture-5}{article}{}
+    \name{author}{2}{}{%
+      {{hash=SSN}{%
+         family={Shahrouzi},
+         familyi={S\bibinitperiod},
+         given={S\bibnamedelima Navid},
+         giveni={S\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+      {{hash=PDG}{%
+         family={Perera},
+         familyi={P\bibinitperiod},
+         given={Darshika\bibnamedelima G},
+         giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{SSNPDG1}
+    \strng{fullhash}{SSNPDG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{1\bibrangedash 18}
+    \field{title}{Dynamic partial reconfigurable hardware architecture for
+  principal component analysis on mobile and embedded devices}
+    \field{volume}{2017}
+    \field{journaltitle}{EURASIP Journal on Embedded Systems}
+    \field{year}{2017}
+  \endentry
+
+  \entry{svd_architecture-1}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=MY}{%
+         family={Ma},
+         familyi={M\bibinitperiod},
+         given={Yafeng},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=WD}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Dong},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{MYWD1}
+    \strng{fullhash}{MYWD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2016 IEEE 13th International Conference on Signal
+  Processing (ICSP)}
+    \field{pages}{487\bibrangedash 490}
+    \field{title}{Accelerating SVD computation on FPGAs for DSP systems}
+    \field{year}{2016}
+  \endentry
+
+  \entry{svd_architecture-2}{article}{}
+    \name{author}{5}{}{%
+      {{hash=ZS}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Shuiping},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=TX}{%
+         family={Tian},
+         familyi={T\bibinitperiod},
+         given={Xin},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=XC}{%
+         family={Xiong},
+         familyi={X\bibinitperiod},
+         given={Chengyi},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=TJ}{%
+         family={Tian},
+         familyi={T\bibinitperiod},
+         given={Jinwen},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=MD}{%
+         family={Ming},
+         familyi={M\bibinitperiod},
+         given={Delie},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{ZS+1}
+    \strng{fullhash}{ZSTXXCTJMD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{132\bibrangedash 136}
+    \field{title}{Fast implementation for the singular value and eigenvalue
+  decomposition based on FPGA}
+    \field{volume}{26}
+    \field{journaltitle}{Chinese Journal of Electronics}
+    \field{year}{2017}
+  \endentry
+
+  \entry{svd_architecture-3}{article}{}
+    \name{author}{4}{}{%
+      {{hash=CYL}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Yen-Liang},
+         giveni={Y\bibinithyphendelim L\bibinitperiod},
+      }}%
+      {{hash=ZCZ}{%
+         family={Zhan},
+         familyi={Z\bibinitperiod},
+         given={Cheng-Zhou},
+         giveni={C\bibinithyphendelim Z\bibinitperiod},
+      }}%
+      {{hash=JTJ}{%
+         family={Jheng},
+         familyi={J\bibinitperiod},
+         given={Ting-Jyun},
+         giveni={T\bibinithyphendelim J\bibinitperiod},
+      }}%
+      {{hash=WAY}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={An-Yeu},
+         giveni={A\bibinithyphendelim Y\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{CYL+1}
+    \strng{fullhash}{CYLZCZJTJWAY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{4}
+    \field{pages}{747\bibrangedash 760}
+    \field{title}{Reconfigurable adaptive singular value decomposition engine
+  design for high-throughput MIMO-OFDM systems}
+    \field{volume}{21}
+    \field{journaltitle}{IEEE transactions on very large scale integration
+  (VLSI) systems}
+    \field{year}{2012}
+  \endentry
+
+  \entry{svd_architecture-4}{article}{}
+    \name{author}{3}{}{%
+      {{hash=TMU}{%
+         family={Torun},
+         familyi={T\bibinitperiod},
+         given={Mustafa\bibnamedelima U},
+         giveni={M\bibinitperiod\bibinitdelim U\bibinitperiod},
+      }}%
+      {{hash=YO}{%
+         family={Yilmaz},
+         familyi={Y\bibinitperiod},
+         given={Onur},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=AAN}{%
+         family={Akansu},
+         familyi={A\bibinitperiod},
+         given={Ali\bibnamedelima N},
+         giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{TMU+1}
+    \strng{fullhash}{TMUYOAAN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{172\bibrangedash 180}
+    \field{title}{FPGA, GPU, and CPU implementations of Jacobi algorithm for
+  eigenanalysis}
+    \field{volume}{96}
+    \field{journaltitle}{Journal of Parallel and Distributed Computing}
+    \field{year}{2016}
+  \endentry
+
+  \entry{svd_architecture-5}{article}{}
+    \name{author}{3}{}{%
+      {{hash=AMV}{%
+         family={Athi},
+         familyi={A\bibinitperiod},
+         given={Mrudula\bibnamedelima V},
+         giveni={M\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=ZSR}{%
+         family={Zekavat},
+         familyi={Z\bibinitperiod},
+         given={Seyed\bibnamedelima Reza},
+         giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=SAA}{%
+         family={Struthers},
+         familyi={S\bibinitperiod},
+         given={Allan\bibnamedelima A},
+         giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{AMV+1}
+    \strng{fullhash}{AMVZSRSAA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{8}
+    \field{pages}{2519\bibrangedash 2526}
+    \field{title}{Real-time signal processing of massive sensor arrays via a
+  parallel fast converging svd algorithm: Latency, throughput, and resource
+  analysis}
+    \field{volume}{16}
+    \field{journaltitle}{IEEE Sensors Journal}
+    \field{year}{2016}
+  \endentry
+
+  \entry{svd_architecture-6}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=WX}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Xinying},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=ZJ}{%
+         family={Zambreno},
+         familyi={Z\bibinitperiod},
+         given={Joseph},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{WXZJ1}
+    \strng{fullhash}{WXZJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2014 IEEE International Parallel \& Distributed
+  Processing Symposium Workshops}
+    \field{pages}{220\bibrangedash 227}
+    \field{title}{An FPGA implementation of the Hestenes-Jacobi algorithm for
+  singular value decomposition}
+    \field{year}{2014}
+  \endentry
+
+  \entry{funda-fpga-arch-1}{book}{}
+    \name{author}{3}{}{%
+      {{hash=BV}{%
+         family={Betz},
+         familyi={B\bibinitperiod},
+         given={Vaughn},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=RJ}{%
+         family={Rose},
+         familyi={R\bibinitperiod},
+         given={Jonathan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Marquardt},
+         familyi={M\bibinitperiod},
+         given={Alexander},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer Science \& Business Media}%
+    }
+    \strng{namehash}{BV+1}
+    \strng{fullhash}{BVRJMA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Architecture and CAD for deep-submicron FPGAs}
+    \field{volume}{497}
+    \field{year}{2012}
+  \endentry
+
+  \entry{funda-fpga-arch-2}{article}{}
+    \name{author}{2}{}{%
+      {{hash=BV}{%
+         family={Betz},
+         familyi={B\bibinitperiod},
+         given={Vaughn},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=RJ}{%
+         family={Rose},
+         familyi={R\bibinitperiod},
+         given={Jonathan},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{BVRJ1}
+    \strng{fullhash}{BVRJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{10\bibrangedash 15}
+    \field{title}{How much logic should go in an FPGA logic block}
+    \field{volume}{15}
+    \field{journaltitle}{IEEE Design \& Test of Computers}
+    \field{year}{2002}
+  \endentry
+
+  \entry{funda-fpga-arch-3}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=LG}{%
+         family={Lemieux},
+         familyi={L\bibinitperiod},
+         given={Guy},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=LP}{%
+         family={Leventis},
+         familyi={L\bibinitperiod},
+         given={Paul},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=LD}{%
+         family={Lewis},
+         familyi={L\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LG+1}
+    \strng{fullhash}{LGLPLD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the 2000 ACM/SIGDA eighth international
+  symposium on Field programmable gate arrays}
+    \field{pages}{155\bibrangedash 164}
+    \field{title}{Generating highly-routable sparse crossbars for PLDs}
+    \field{year}{2000}
+  \endentry
+
+  \entry{funda-fpga-arch-4}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=TX}{%
+         family={Tang},
+         familyi={T\bibinitperiod},
+         given={Xifan},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=GE}{%
+         family={Giacomin},
+         familyi={G\bibinitperiod},
+         given={Edouard},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=AA}{%
+         family={Alacchi},
+         familyi={A\bibinitperiod},
+         given={Aur{\'e}lien},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GPE}{%
+         family={Gaillardon},
+         familyi={G\bibinitperiod},
+         given={Pierre-Emmanuel},
+         giveni={P\bibinithyphendelim E\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{TX+1}
+    \strng{fullhash}{TXGEAAGPE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2019 International Conference on Field-Programmable
+  Technology (ICFPT)}
+    \field{pages}{247\bibrangedash 250}
+    \field{title}{A study on switch block patterns for tileable FPGA routing
+  architectures}
+    \field{year}{2019}
+  \endentry
+
+  \entry{funda-fpga-arch-5}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=BV}{%
+         family={Betz},
+         familyi={B\bibinitperiod},
+         given={Vaughn},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=RJ}{%
+         family={Rose},
+         familyi={R\bibinitperiod},
+         given={Jonathan},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BVRJ1}
+    \strng{fullhash}{BVRJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the 1999 ACM/SIGDA seventh international
+  symposium on Field programmable gate arrays}
+    \field{pages}{59\bibrangedash 68}
+    \field{title}{FPGA routing architecture: Segmentation and buffering to
+  optimize speed and density}
+    \field{year}{1999}
+  \endentry
+
+  \entry{funda-fpga-arch-6}{inproceedings}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{10}{}{%
+      {{hash=LD}{%
+         family={Lewis},
+         familyi={L\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=BV}{%
+         family={Betz},
+         familyi={B\bibinitperiod},
+         given={Vaughn},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=JD}{%
+         family={Jefferson},
+         familyi={J\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=LA}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Andy},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=LC}{%
+         family={Lane},
+         familyi={L\bibinitperiod},
+         given={Chris},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=LP}{%
+         family={Leventis},
+         familyi={L\bibinitperiod},
+         given={Paul},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=MS}{%
+         family={Marquardt},
+         familyi={M\bibinitperiod},
+         given={Sandy},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=MC}{%
+         family={McClintock},
+         familyi={M\bibinitperiod},
+         given={Cameron},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=PB}{%
+         family={Pedersen},
+         familyi={P\bibinitperiod},
+         given={Bruce},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=PG}{%
+         family={Powell},
+         familyi={P\bibinitperiod},
+         given={Giles},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LD+1}
+    \strng{fullhash}{LDBVJDLALCLPMSMCPBPG+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the 2003 ACM/SIGDA eleventh international
+  symposium on Field programmable gate arrays}
+    \field{pages}{12\bibrangedash 20}
+    \field{title}{The stratix$\pi$ routing and logic architecture}
+    \field{year}{2003}
+  \endentry
+
+  \entry{funda-fpga-arch-7}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=LG}{%
+         family={Lemieux},
+         familyi={L\bibinitperiod},
+         given={Guy},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=LE}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Edmund},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=TM}{%
+         family={Tom},
+         familyi={T\bibinitperiod},
+         given={Marvin},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=YA}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={Anthony},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{LG+1}
+    \strng{fullhash}{LGLETMYA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings. 2004 IEEE International Conference on
+  Field-Programmable Technology (IEEE Cat. No. 04EX921)}
+    \field{pages}{41\bibrangedash 48}
+    \field{title}{Directional and single-driver wires in FPGA interconnect}
+    \field{year}{2004}
+  \endentry
+
+  \entry{funda-fpga-arch-8}{report}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Implementing RAM Functions in FLEX 10K Devices (A-AN-052-01)}
+    \list{institution}{1}{%
+      {Altera Corporation}%
+    }
+    \field{type}{techreport}
+    \field{year}{1995}
+  \endentry
+
+  \entry{funda-fpga-arch-9}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=TK}{%
+         family={Tatsumura},
+         familyi={T\bibinitperiod},
+         given={Kosuke},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=YS}{%
+         family={Yazdanshenas},
+         familyi={Y\bibinitperiod},
+         given={Sadegh},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=BV}{%
+         family={Betz},
+         familyi={B\bibinitperiod},
+         given={Vaughn},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{TK+1}
+    \strng{fullhash}{TKYSBV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2016 International Conference on Field-Programmable
+  Technology (FPT)}
+    \field{pages}{4\bibrangedash 11}
+    \field{title}{High density, low energy, magnetic tunnel junction based
+  block RAMs for memory-rich FPGAs}
+    \field{year}{2016}
+  \endentry
+
+  \entry{funda-fpga-arch-10}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=NT}{%
+         family={Ngai},
+         familyi={N\bibinitperiod},
+         given={Tony},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=RJ}{%
+         family={Rose},
+         familyi={R\bibinitperiod},
+         given={Jonathan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=WSJ}{%
+         family={Wilton},
+         familyi={W\bibinitperiod},
+         given={Steven\bibnamedelima JE},
+         giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{NT+1}
+    \strng{fullhash}{NTRJWSJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the IEEE 1995 Custom Integrated Circuits
+  Conference}
+    \field{pages}{499\bibrangedash 502}
+    \field{title}{An SRAM-programmable field-configurable memory}
+    \field{year}{1995}
+  \endentry
+
+  \entry{funda-fpga-arch-11}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=WSJ}{%
+         family={Wilton},
+         familyi={W\bibinitperiod},
+         given={Steven\bibnamedelima JE},
+         giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=RJ}{%
+         family={Rose},
+         familyi={R\bibinitperiod},
+         given={Jonathan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=VZG}{%
+         family={Vranesic},
+         familyi={V\bibinitperiod},
+         given={Zvonko\bibnamedelima G},
+         giveni={Z\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WSJ+1}
+    \strng{fullhash}{WSJRJVZG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the 1995 ACM third international symposium
+  on Field-programmable gate arrays}
+    \field{pages}{97\bibrangedash 103}
+    \field{title}{Architecture of centralized field-configurable memory}
+    \field{year}{1995}
+  \endentry
+
+  \entry{funda-fpga-arch-12}{inproceedings}{}
+    \name{author}{7}{}{%
+      {{hash=LD}{%
+         family={Lewis},
+         familyi={L\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=AE}{%
+         family={Ahmed},
+         familyi={A\bibinitperiod},
+         given={Elias},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=CD}{%
+         family={Cashman},
+         familyi={C\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=VT}{%
+         family={Vanderhoek},
+         familyi={V\bibinitperiod},
+         given={Tim},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=LC}{%
+         family={Lane},
+         familyi={L\bibinitperiod},
+         given={Chris},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=LA}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Andy},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=PP}{%
+         family={Pan},
+         familyi={P\bibinitperiod},
+         given={Philip},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LD+1}
+    \strng{fullhash}{LDAECDVTLCLAPP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the ACM/SIGDA international symposium on
+  Field programmable gate arrays}
+    \field{pages}{33\bibrangedash 42}
+    \field{title}{Architectural enhancements in Stratix-III™ and
+  Stratix-IV™}
+    \field{year}{2009}
+  \endentry
+
+  \entry{funda-fpga-arch-13}{article}{}
+    \name{author}{1}{}{%
+      {{hash=XVI}{%
+         family={Xilinx},
+         familyi={X\bibinitperiod},
+         given={Virtex-II},
+         giveni={V\bibinithyphendelim I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{XVI1}
+    \strng{fullhash}{XVI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{platform FPGAs: complete data sheet}
+    \field{volume}{5}
+    \field{journaltitle}{DS031 (v3. 5), Nov}
+    \field{year}{2002}
+  \endentry
+
+  \entry{target-arch-1}{inproceedings}{}
+    \name{author}{9}{}{%
+      {{hash=LD}{%
+         family={Lewis},
+         familyi={L\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=CG}{%
+         family={Chiu},
+         familyi={C\bibinitperiod},
+         given={Gordon},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=CJ}{%
+         family={Chromczak},
+         familyi={C\bibinitperiod},
+         given={Jeffrey},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=GD}{%
+         family={Galloway},
+         familyi={G\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=GB}{%
+         family={Gamsa},
+         familyi={G\bibinitperiod},
+         given={Ben},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=MV}{%
+         family={Manohararajah},
+         familyi={M\bibinitperiod},
+         given={Valavan},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=MI}{%
+         family={Milton},
+         familyi={M\bibinitperiod},
+         given={Ian},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=VT}{%
+         family={Vanderhoek},
+         familyi={V\bibinitperiod},
+         given={Tim},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=VDJ}{%
+         family={Van\bibnamedelima Dyken},
+         familyi={V\bibinitperiod\bibinitdelim D\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LD+1}
+    \strng{fullhash}{LDCGCJGDGBMVMIVTVDJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the 2016 ACM/SIGDA International Symposium
+  on Field-Programmable Gate Arrays}
+    \field{pages}{159\bibrangedash 168}
+    \field{title}{The Stratix™ 10 highly pipelined FPGA architecture}
+    \field{year}{2016}
+  \endentry
+
+  \entry{target-arch-2}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{10}{}{%
+      {{hash=MKE}{%
+         family={Murray},
+         familyi={M\bibinitperiod},
+         given={Kevin\bibnamedelima E},
+         giveni={K\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=PO}{%
+         family={Petelin},
+         familyi={P\bibinitperiod},
+         given={Oleg},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=ZS}{%
+         family={Zhong},
+         familyi={Z\bibinitperiod},
+         given={Sheng},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=WJM}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Jia\bibnamedelima Min},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=EM}{%
+         family={Eldafrawy},
+         familyi={E\bibinitperiod},
+         given={Mohamed},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=LJP}{%
+         family={Legault},
+         familyi={L\bibinitperiod},
+         given={Jean-Philippe},
+         giveni={J\bibinithyphendelim P\bibinitperiod},
+      }}%
+      {{hash=SE}{%
+         family={Sha},
+         familyi={S\bibinitperiod},
+         given={Eugene},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=GAG}{%
+         family={Graham},
+         familyi={G\bibinitperiod},
+         given={Aaron\bibnamedelima G},
+         giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=WJ}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Jean},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=WMJ}{%
+         family={Walker},
+         familyi={W\bibinitperiod},
+         given={Matthew\bibnamedelima JP},
+         giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ACM New York, NY, USA}%
+    }
+    \strng{namehash}{MKE+1}
+    \strng{fullhash}{MKEPOZSWJMEMLJPSEGAGWJWMJ+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{1\bibrangedash 55}
+    \field{title}{VTR 8: High-performance CAD and customizable FPGA
+  architecture modelling}
+    \field{volume}{13}
+    \field{journaltitle}{ACM Transactions on Reconfigurable Technology and
+  Systems (TRETS)}
+    \field{year}{2020}
+  \endentry
+
+  \entry{arch-benchmark-metrics-1}{article}{}
+    \name{author}{2}{}{%
+      {{hash=KFF}{%
+         family={Khan},
+         familyi={K\bibinitperiod},
+         given={Farheen\bibnamedelima Fatima},
+         giveni={F\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=YA}{%
+         family={Ye},
+         familyi={Y\bibinitperiod},
+         given={Andy},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Association for Computing Machinery}%
+    }
+    \strng{namehash}{KFFYA1}
+    \strng{fullhash}{KFFYA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1145/3182394
+    \endverb
+    \field{issn}{1936-7406}
+    \field{number}{1}
+    \field{title}{An Evaluation on the Accuracy of the Minimum-Width Transistor
+  Area Models in Ranking the Layout Area of FPGA Architectures}
+    \verb{url}
+    \verb https://doi.org/10.1145/3182394
+    \endverb
+    \field{volume}{11}
+    \list{location}{1}{%
+      {New York, NY, USA}%
+    }
+    \field{journaltitle}{ACM Trans. Reconfigurable Technol. Syst.}
+    \field{month}{03}
+    \field{year}{2018}
+  \endentry
+
+  \entry{arch-benchmark-metrics-2}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=NA}{%
+         family={Nayak},
+         familyi={N\bibinitperiod},
+         given={Anshuman},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=HM}{%
+         family={Haldar},
+         familyi={H\bibinitperiod},
+         given={Malay},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Choudhary},
+         familyi={C\bibinitperiod},
+         given={Alok},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BP}{%
+         family={Banerjee},
+         familyi={B\bibinitperiod},
+         given={Prithviraj},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{NA+1}
+    \strng{fullhash}{NAHMCABP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings 2002 Design, Automation and Test in Europe
+  Conference and Exhibition}
+    \field{pages}{862\bibrangedash 869}
+    \field{title}{Accurate area and delay estimators for FPGAs}
+    \field{year}{2002}
+  \endentry
+
+  \entry{vtr-toolchain-1}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{10}{}{%
+      {{hash=LJ}{%
+         family={Luu},
+         familyi={L\bibinitperiod},
+         given={Jason},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=GJ}{%
+         family={Goeders},
+         familyi={G\bibinitperiod},
+         given={Jeffrey},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=WM}{%
+         family={Wainberg},
+         familyi={W\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={Somerville},
+         familyi={S\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=YT}{%
+         family={Yu},
+         familyi={Y\bibinitperiod},
+         given={Thien},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=NK}{%
+         family={Nasartschuk},
+         familyi={N\bibinitperiod},
+         given={Konstantin},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=NM}{%
+         family={Nasr},
+         familyi={N\bibinitperiod},
+         given={Miad},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=WS}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Sen},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=LT}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Tim},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=AN}{%
+         family={Ahmed},
+         familyi={A\bibinitperiod},
+         given={Nooruddin},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ACM New York, NY, USA}%
+    }
+    \strng{namehash}{LJ+1}
+    \strng{fullhash}{LJGJWMSAYTNKNMWSLTAN+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{1\bibrangedash 30}
+    \field{title}{VTR 7.0: Next generation architecture and CAD system for
+  FPGAs}
+    \field{volume}{7}
+    \field{journaltitle}{ACM Transactions on Reconfigurable Technology and
+  Systems (TRETS)}
+    \field{year}{2014}
+  \endentry
+
+  \entry{vtr-toolchain-2}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=WC}{%
+         family={Wolf},
+         familyi={W\bibinitperiod},
+         given={Clifford},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=GJ}{%
+         family={Glaser},
+         familyi={G\bibinitperiod},
+         given={Johann},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=KJ}{%
+         family={Kepler},
+         familyi={K\bibinitperiod},
+         given={Johannes},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WC+1}
+    \strng{fullhash}{WCGJKJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the 21st Austrian Workshop on
+  Microelectronics (Austrochip)}
+    \field{title}{Yosys-a free Verilog synthesis suite}
+    \field{volume}{97}
+    \field{year}{2013}
+  \endentry
+
+  \entry{vtr-toolchain-3}{article}{}
+    \name{author}{1}{}{%
+      {{hash=KY}{%
+         family={Kukimoto},
+         familyi={K\bibinitperiod},
+         given={Yuji},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KY1}
+    \strng{fullhash}{KY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Blif-mv}
+    \field{journaltitle}{The VIS Group, University California, Berkely}
+    \field{year}{1996}
+  \endentry
+
+  \entry{vtr-toolchain-4}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=BR}{%
+         family={Brayton},
+         familyi={B\bibinitperiod},
+         given={Robert},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Mishchenko},
+         familyi={M\bibinitperiod},
+         given={Alan},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{BRMA1}
+    \strng{fullhash}{BRMA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Computer Aided Verification: 22nd International
+  Conference, CAV 2010, Edinburgh, UK, July 15-19, 2010. Proceedings 22}
+    \field{pages}{24\bibrangedash 40}
+    \field{title}{ABC: An academic industrial-strength verification tool}
+    \field{year}{2010}
+  \endentry
+
+  \entry{vtr-toolchain-5}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=BV}{%
+         family={Betz},
+         familyi={B\bibinitperiod},
+         given={Vaughn},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=RJ}{%
+         family={Rose},
+         familyi={R\bibinitperiod},
+         given={Jonathan},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{BVRJ1}
+    \strng{fullhash}{BVRJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{International Workshop on Field Programmable Logic and
+  Applications}
+    \field{pages}{213\bibrangedash 222}
+    \field{title}{VPR: A new packing, placement and routing tool for FPGA
+  research}
+    \field{year}{1997}
+  \endentry
+
+  \entry{pca-1}{article}{}
+    \name{author}{2}{}{%
+      {{hash=BR}{%
+         family={Bro},
+         familyi={B\bibinitperiod},
+         given={Rasmus},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=SAK}{%
+         family={Smilde},
+         familyi={S\bibinitperiod},
+         given={Age\bibnamedelima K},
+         giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Royal society of chemistry}%
+    }
+    \strng{namehash}{BRSAK1}
+    \strng{fullhash}{BRSAK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{9}
+    \field{pages}{2812\bibrangedash 2831}
+    \field{title}{Principal component analysis}
+    \field{volume}{6}
+    \field{journaltitle}{Analytical methods}
+    \field{year}{2014}
+  \endentry
+
+  \entry{pca-2}{article}{}
+    \name{author}{6}{}{%
+      {{hash=GM}{%
+         family={Greenacre},
+         familyi={G\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=GPJ}{%
+         family={Groenen},
+         familyi={G\bibinitperiod},
+         given={Patrick\bibnamedelima JF},
+         giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=HT}{%
+         family={Hastie},
+         familyi={H\bibinitperiod},
+         given={Trevor},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=dAI}{%
+         family={d’Enza},
+         familyi={d\bibinitperiod},
+         given={Alfonso\bibnamedelima Iodice},
+         giveni={A\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Markos},
+         familyi={M\bibinitperiod},
+         given={Angelos},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=TE}{%
+         family={Tuzhilina},
+         familyi={T\bibinitperiod},
+         given={Elena},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Nature Publishing Group UK London}%
+    }
+    \strng{namehash}{GM+1}
+    \strng{fullhash}{GMGPJHTdAIMATE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{100}
+    \field{title}{Principal component analysis}
+    \field{volume}{2}
+    \field{journaltitle}{Nature Reviews Methods Primers}
+    \field{year}{2022}
+  \endentry
+
+  \entry{pca-3}{article}{}
+    \name{author}{1}{}{%
+      {{hash=SJ}{%
+         family={Shlens},
+         familyi={S\bibinitperiod},
+         given={Jonathon},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SJ1}
+    \strng{fullhash}{SJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{A tutorial on principal component analysis}
+    \field{journaltitle}{arXiv preprint arXiv:1404.1100}
+    \field{year}{2014}
+  \endentry
+
+  \entry{pca-4}{inproceedings}{}
+    \name{author}{6}{}{%
+      {{hash=RS}{%
+         family={Ramasubramanian},
+         familyi={R\bibinitperiod},
+         given={Srivaths},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SC}{%
+         family={Sowmyarani},
+         familyi={S\bibinitperiod},
+         given={CN},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=AAJ}{%
+         family={Athreya},
+         familyi={A\bibinitperiod},
+         given={Amogh\bibnamedelima J},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Devarajan},
+         familyi={D\bibinitperiod},
+         given={Anjali},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SAU}{%
+         family={Shankar},
+         familyi={S\bibinitperiod},
+         given={Adithya\bibnamedelima Udaya},
+         giveni={A\bibinitperiod\bibinitdelim U\bibinitperiod},
+      }}%
+      {{hash=KR}{%
+         family={Kumar},
+         familyi={K\bibinitperiod},
+         given={Ramakanth},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{RS+1}
+    \strng{fullhash}{RSSCAAJDASAUKR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2024 1st International Conference on Communications and
+  Computer Science (InCCCS)}
+    \field{pages}{1\bibrangedash 6}
+    \field{title}{Data Dimensionality Reduction Using Principal Component
+  Analysis: A Case Study}
+    \field{year}{2024}
+  \endentry
+
+  \entry{pca-5}{misc}{}
+    \name{author}{2}{}{%
+      {{hash=AS}{%
+         family={Aeberhard},
+         familyi={A\bibinitperiod},
+         given={Stefan},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=FM}{%
+         family={Forina},
+         familyi={F\bibinitperiod},
+         given={M.},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ASFM1}
+    \strng{fullhash}{ASFM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{howpublished}{UCI Machine Learning Repository}
+    \field{note}{{DOI}: https://doi.org/10.24432/C5PC7J}
+    \field{title}{{Wine}}
+    \field{year}{1992}
+  \endentry
+
+  \entry{mm-technique-1}{article}{}
+    \name{author}{2}{}{%
+      {{hash=SJ}{%
+         family={Smith},
+         familyi={S\bibinitperiod},
+         given={J.E.},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SG}{%
+         family={Sohi},
+         familyi={S\bibinitperiod},
+         given={G.S.},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \keyw{Microarchitecture;Pipeline processing;Microprocessors;Parallel
+  processing;Clocks;Reduced instruction set computing;Processor
+  scheduling;Dynamic scheduling;Registers;Technological innovation}
+    \strng{namehash}{SJSG1}
+    \strng{fullhash}{SJSG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/5.476078
+    \endverb
+    \field{number}{12}
+    \field{pages}{1609\bibrangedash 1624}
+    \field{title}{The microarchitecture of superscalar processors}
+    \field{volume}{83}
+    \field{journaltitle}{Proceedings of the IEEE}
+    \field{year}{1995}
+  \endentry
+
+  \entry{mm-techniques-2}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=AA}{%
+         family={Ahmad},
+         familyi={A\bibinitperiod},
+         given={Afzal},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=DL}{%
+         family={Du},
+         familyi={D\bibinitperiod},
+         given={Linfeng},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=ZW}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Wei},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AA+1}
+    \strng{fullhash}{AADLZW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.48550/arXiv.2406.02088
+    \endverb
+    \field{title}{Fast and Practical Strassen's Matrix Multiplication using
+  FPGAs}
+    \field{month}{06}
+    \field{year}{2024}
+  \endentry
+
+  \entry{mm-techniques-3}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=AA}{%
+         family={Ambainis},
+         familyi={A\bibinitperiod},
+         given={Andris},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=FY}{%
+         family={Filmus},
+         familyi={F\bibinitperiod},
+         given={Yuval},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=LGF}{%
+         family={Le\bibnamedelima Gall},
+         familyi={L\bibinitperiod\bibinitdelim G\bibinitperiod},
+         given={Fran\c{c}ois},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Association for Computing Machinery}%
+    }
+    \strng{namehash}{AA+2}
+    \strng{fullhash}{AAFYLGF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1145/2746539.2746554
+    \endverb
+    \field{isbn}{9781450335362}
+    \field{title}{Fast Matrix Multiplication: Limitations of the
+  Coppersmith-Winograd Method}
+    \verb{url}
+    \verb https://doi.org/10.1145/2746539.2746554
+    \endverb
+    \list{location}{1}{%
+      {New York, NY, USA}%
+    }
+    \field{year}{2015}
+  \endentry
+
+  \entry{mm-techniques-4}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=AB}{%
+         family={Asgari},
+         familyi={A\bibinitperiod},
+         given={Bahar},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=HR}{%
+         family={Hadidi},
+         familyi={H\bibinitperiod},
+         given={Ramyad},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=KH}{%
+         family={Kim},
+         familyi={K\bibinitperiod},
+         given={Hyesoon},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \keyw{Data analysis;Neural networks;Computer
+  architecture;Throughput;Real-time systems;Arrays;Field programmable gate
+  arrays;systolic array;matrix multiplication;deep neural
+  network;inference;edge applications;latency}
+    \strng{namehash}{AB+1}
+    \strng{fullhash}{ABHRKH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2020 IEEE 38th International Conference on Computer
+  Design (ICCD)}
+    \verb{doi}
+    \verb 10.1109/ICCD50377.2020.00036
+    \endverb
+    \field{pages}{130\bibrangedash 137}
+    \field{title}{MEISSA: Multiplying Matrices Efficiently in a Scalable
+  Systolic Architecture}
+    \field{year}{2020}
+  \endentry
+
+  \entry{mm-techniques-5}{inproceedings}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{4}{}{%
+      {{hash=JNP}{%
+         family={Jouppi},
+         familyi={J\bibinitperiod},
+         given={Norman\bibnamedelima P.},
+         giveni={N\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=YC}{%
+         family={Young},
+         familyi={Y\bibinitperiod},
+         given={Cliff},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=PN}{%
+         family={Patil},
+         familyi={P\bibinitperiod},
+         given={Nishant},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=PD}{%
+         family={Patterson},
+         familyi={P\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ACM}%
+    }
+    \strng{namehash}{JNP+2}
+    \strng{fullhash}{JNPYCPNPD+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the 44th Annual International Symposium on
+  Computer Architecture (ISCA)}
+    \verb{doi}
+    \verb 10.1145/3079856.3080246
+    \endverb
+    \field{pages}{1–12}
+    \field{title}{In-Datacenter Performance Analysis of a Tensor Processing
+  Unit}
+    \verb{url}
+    \verb https://doi.org/10.1145/3079856.3080246
+    \endverb
+    \field{year}{2017}
+  \endentry
+
+  \entry{svd-hardware-1}{article}{}
+    \name{author}{2}{}{%
+      {{hash=GG}{%
+         family={Golub},
+         familyi={G\bibinitperiod},
+         given={G.},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=KW}{%
+         family={Kahan},
+         familyi={K\bibinitperiod},
+         given={W.},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GGKW1}
+    \strng{fullhash}{GGKW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1137/0702016
+    \endverb
+    \field{number}{2}
+    \field{pages}{205\bibrangedash 224}
+    \field{title}{Calculating the Singular Values and Pseudo-Inverse of a
+  Matrix}
+    \field{volume}{2}
+    \field{journaltitle}{Journal of the Society for Industrial and Applied
+  Mathematics Series B Numerical Analysis}
+    \field{year}{1965}
+  \endentry
+
+  \entry{svd-hardware-2}{article}{}
+    \name{author}{4}{}{%
+      {{hash=BR}{%
+         family={Bhattacharjya},
+         familyi={B\bibinitperiod},
+         given={Rajat},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={Sarkar},
+         familyi={S\bibinitperiod},
+         given={Arnab},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MB}{%
+         family={Maity},
+         familyi={M\bibinitperiod},
+         given={Biswadip},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=DN}{%
+         family={Dutt},
+         familyi={D\bibinitperiod},
+         given={Nikil},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BR+2}
+    \strng{fullhash}{BRSAMBDN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/LES.2024.3440208
+    \endverb
+    \field{number}{4}
+    \field{pages}{329\bibrangedash 332}
+    \field{title}{MUSIC-Lite: Efficient MUSIC Using Approximate Computing: An
+  OFDM Radar Case Study}
+    \field{volume}{16}
+    \field{journaltitle}{IEEE Embedded Systems Letters}
+    \field{year}{2024}
+  \endentry
+
+  \entry{svd-hardware-3}{article}{}
+    \name{author}{7}{}{%
+      {{hash=DJ}{%
+         family={Dongarra},
+         familyi={D\bibinitperiod},
+         given={Jack},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=GM}{%
+         family={Gates},
+         familyi={G\bibinitperiod},
+         given={Mark},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=HA}{%
+         family={Haidar},
+         familyi={H\bibinitperiod},
+         given={Azzam},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KJ}{%
+         family={Kurzak},
+         familyi={K\bibinitperiod},
+         given={Jakub},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LP}{%
+         family={Luszczek},
+         familyi={L\bibinitperiod},
+         given={Piotr},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=TS}{%
+         family={Tomov},
+         familyi={T\bibinitperiod},
+         given={Stanimire},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=YI}{%
+         family={Yamazaki},
+         familyi={Y\bibinitperiod},
+         given={Ichitaro},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DJ+1}
+    \strng{fullhash}{DJGMHAKJLPTSYI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1137/17M1117732
+    \endverb
+    \field{number}{4}
+    \field{pages}{808\bibrangedash 865}
+    \field{title}{The Singular Value Decomposition: Anatomy of Optimizing an
+  Algorithm for Extreme Scale}
+    \field{volume}{60}
+    \field{journaltitle}{SIAM Review}
+    \field{year}{2018}
+  \endentry
+
+  \entry{svd-hardware-4}{article}{}
+    \name{author}{4}{}{%
+      {{hash=SM}{%
+         family={Sajjad},
+         familyi={S\bibinitperiod},
+         given={Muhammad},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=YMZ}{%
+         family={Yusoff},
+         familyi={Y\bibinitperiod},
+         given={Mohd\bibnamedelima Zuki},
+         giveni={M\bibinitperiod\bibinitdelim Z\bibinitperiod},
+      }}%
+      {{hash=YN}{%
+         family={Yahya},
+         familyi={Y\bibinitperiod},
+         given={Norashikin},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=HAS}{%
+         family={Haider},
+         familyi={H\bibinitperiod},
+         given={Ali\bibnamedelima Shahbaz},
+         giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SM+1}
+    \strng{fullhash}{SMYMZYNHAS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/ACCESS.2021.3072495
+    \endverb
+    \field{pages}{58287\bibrangedash 58305}
+    \field{title}{An Efficient VLSI Architecture for FastICA by Using the
+  Algebraic Jacobi Method for EVD}
+    \field{volume}{9}
+    \field{journaltitle}{IEEE Access}
+    \field{year}{2021}
+  \endentry
+
+  \entry{svd-hardware-5}{article}{}
+    \name{author}{3}{}{%
+      {{hash=SZ}{%
+         family={Shi},
+         familyi={S\bibinitperiod},
+         given={Zhiguo},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=HQ}{%
+         family={He},
+         familyi={H\bibinitperiod},
+         given={Qianwen},
+         giveni={Q\bibinitperiod},
+      }}%
+      {{hash=LY}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Ying},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{SZ+1}
+    \strng{fullhash}{SZHQLY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6}
+    \field{pages}{6275\bibrangedash 6285}
+    \field{title}{Accelerating parallel Jacobi method for matrix eigenvalue
+  computation in DOA estimation algorithm}
+    \field{volume}{69}
+    \field{journaltitle}{IEEE Transactions on Vehicular Technology}
+    \field{year}{2020}
+  \endentry
+
+  \entry{cordic-3}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=VJ}{%
+         family={Volder},
+         familyi={V\bibinitperiod},
+         given={Jack},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Association for Computing Machinery}%
+    }
+    \strng{namehash}{VJ1}
+    \strng{fullhash}{VJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1145/1457838.1457886
+    \endverb
+    \field{isbn}{9781450378659}
+    \field{pages}{257–261}
+    \field{series}{IRE-AIEE-ACM '59 (Western)}
+    \field{title}{The CORDIC computing technique}
+    \verb{url}
+    \verb https://doi.org/10.1145/1457838.1457886
+    \endverb
+    \list{location}{1}{%
+      {San Francisco, California}%
+    }
+    \field{year}{1959}
+    \warn{\item Can't use 'location' + 'address'}
+  \endentry
+
+  \entry{cordic-1}{article}{}
+    \name{author}{5}{}{%
+      {{hash=MP}{%
+         family={Meher},
+         familyi={M\bibinitperiod},
+         given={P.K.},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=VJ}{%
+         family={Valls},
+         familyi={V\bibinitperiod},
+         given={Javier},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=JTB}{%
+         family={Juang},
+         familyi={J\bibinitperiod},
+         given={Tso-Bing},
+         giveni={T\bibinithyphendelim B\bibinitperiod},
+      }}%
+      {{hash=SK}{%
+         family={Sridharan},
+         familyi={S\bibinitperiod},
+         given={K.},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=MK}{%
+         family={Maharatna},
+         familyi={M\bibinitperiod},
+         given={Koushik},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MP+1}
+    \strng{fullhash}{MPVJJTBSKMK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/TCSI.2009.2025803
+    \endverb
+    \field{pages}{1893 \bibrangedash  1907}
+    \field{title}{50 Years of CORDIC: Algorithms, Architectures, and
+  Applications}
+    \field{volume}{56}
+    \field{journaltitle}{Circuits and Systems I: Regular Papers, IEEE
+  Transactions on}
+    \field{month}{10}
+    \field{year}{2009}
+  \endentry
+
+  \entry{cordic-2}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=A}{%
+         family={{AMD}},
+         familyi={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{A1}
+    \strng{fullhash}{A1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{howpublished}{\url{https://docs.amd.com}}
+    \field{note}{Accessed: May 28, 2025}
+    \field{title}{{CORDIC Technical Documentation}}
+  \endentry
+
+  \entry{cache-1}{article}{}
+    \name{author}{1}{}{%
+      {{hash=SAJ}{%
+         family={Smith},
+         familyi={S\bibinitperiod},
+         given={Alan\bibnamedelima Jay},
+         giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ACM New York, NY, USA}%
+    }
+    \strng{namehash}{SAJ1}
+    \strng{fullhash}{SAJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{3}
+    \field{pages}{473\bibrangedash 530}
+    \field{title}{Cache memories}
+    \field{volume}{14}
+    \field{journaltitle}{ACM Computing Surveys (CSUR)}
+    \field{year}{1982}
+  \endentry
+
+  \entry{cache-3}{article}{}
+    \name{author}{1}{}{%
+      {{hash=JNP}{%
+         family={Jouppi},
+         familyi={J\bibinitperiod},
+         given={Norman\bibnamedelima P},
+         giveni={N\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ACM New York, NY, USA}%
+    }
+    \strng{namehash}{JNP1}
+    \strng{fullhash}{JNP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{191\bibrangedash 201}
+    \field{title}{Cache write policies and performance}
+    \field{volume}{21}
+    \field{journaltitle}{ACM SIGARCH Computer Architecture News}
+    \field{year}{1993}
+  \endentry
+
+  \entry{cache-4}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=BL}{%
+         family={Backes},
+         familyi={B\bibinitperiod},
+         given={Luna},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=JDA}{%
+         family={Jim{\'e}nez},
+         familyi={J\bibinitperiod},
+         given={Daniel\bibnamedelima A},
+         giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BLJDA1}
+    \strng{fullhash}{BLJDA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the International Symposium on Memory
+  Systems}
+    \field{pages}{428\bibrangedash 438}
+    \field{title}{The impact of cache inclusion policies on cache management
+  techniques}
+    \field{year}{2019}
+  \endentry
+
+  \entry{cache-5}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=DJJ}{%
+         family={Dongarra},
+         familyi={D\bibinitperiod},
+         given={Jack\bibnamedelima J},
+         giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{DJJ1}
+    \strng{fullhash}{DJJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{International Conference on Supercomputing}
+    \field{pages}{456\bibrangedash 474}
+    \field{title}{The linpack benchmark: An explanation}
+    \field{year}{1987}
+  \endentry
+
+  \entry{cache-6}{article}{}
+    \name{author}{2}{}{%
+      {{hash=LAR}{%
+         family={Lebeck},
+         familyi={L\bibinitperiod},
+         given={Alvin\bibnamedelima R},
+         giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=WDA}{%
+         family={Wood},
+         familyi={W\bibinitperiod},
+         given={David\bibnamedelima A},
+         giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{LARWDA1}
+    \strng{fullhash}{LARWDA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{10}
+    \field{pages}{15\bibrangedash 26}
+    \field{title}{Cache profiling and the SPEC benchmarks: A case study}
+    \field{volume}{27}
+    \field{journaltitle}{Computer}
+    \field{year}{1994}
+  \endentry
+
+  \entry{cache-7}{article}{}
+    \name{author}{5}{}{%
+      {{hash=BR}{%
+         family={Balasubramonian},
+         familyi={B\bibinitperiod},
+         given={Rajeev},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=KAB}{%
+         family={Kahng},
+         familyi={K\bibinitperiod},
+         given={Andrew\bibnamedelima B},
+         giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=MN}{%
+         family={Muralimanohar},
+         familyi={M\bibinitperiod},
+         given={Naveen},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={Shafiee},
+         familyi={S\bibinitperiod},
+         given={Ali},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SV}{%
+         family={Srinivas},
+         familyi={S\bibinitperiod},
+         given={Vaishnav},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ACM New York, NY, USA}%
+    }
+    \strng{namehash}{BR+1}
+    \strng{fullhash}{BRKABMNSASV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{1\bibrangedash 25}
+    \field{title}{CACTI 7: New tools for interconnect exploration in innovative
+  off-chip memories}
+    \field{volume}{14}
+    \field{journaltitle}{ACM Transactions on Architecture and Code Optimization
+  (TACO)}
+    \field{year}{2017}
+  \endentry
+
+  \entry{cache-8}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=JNP}{%
+         family={Jouppi},
+         familyi={J\bibinitperiod},
+         given={Norman\bibnamedelima P},
+         giveni={N\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=KAB}{%
+         family={Kahng},
+         familyi={K\bibinitperiod},
+         given={Andrew\bibnamedelima B},
+         giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=MN}{%
+         family={Muralimanohar},
+         familyi={M\bibinitperiod},
+         given={Naveen},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=SV}{%
+         family={Srinivas},
+         familyi={S\bibinitperiod},
+         given={Vaishnav},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{JNP+1}
+    \strng{fullhash}{JNPKABMNSV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of the International Conference on
+  Computer-Aided Design}
+    \field{pages}{294\bibrangedash 301}
+    \field{title}{CACTI-IO: CACTI with off-chip power-area-timing models}
+    \field{year}{2012}
+  \endentry
+
+  \entry{fpga-flow-1}{manual}{}
+    \name{author}{1}{}{%
+      {{hash=X}{%
+         family={{Xilinx Inc.}},
+         familyi={X\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{X2}
+    \strng{fullhash}{X2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{edition}{v2022.1}
+    \field{note}{Xilinx User Guide UG903}
+    \field{title}{Using Constraints}
+    \list{location}{1}{%
+      {San Jose, CA, USA}%
+    }
+    \list{institution}{1}{%
+      {Xilinx Inc.}%
+    }
+    \field{month}{06}
+    \field{year}{2022}
+  \endentry
+
+  \entry{asic-3}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=AT}{%
+         family={Ajayi},
+         familyi={A\bibinitperiod},
+         given={Tutu},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=BD}{%
+         family={Blaauw},
+         familyi={B\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ATBD1}
+    \strng{fullhash}{ATBD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Proceedings of Government Microcircuit Applications and
+  Critical Technology Conference}
+    \field{title}{OpenROAD: Toward a self-driving, open-source digital layout
+  implementation tool chain}
+    \field{year}{2019}
+  \endentry
+
+  \entry{asic-1}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=SM}{%
+         family={Shalan},
+         familyi={S\bibinitperiod},
+         given={Mohamed},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=ET}{%
+         family={Edwards},
+         familyi={E\bibinitperiod},
+         given={Tim},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SMET1}
+    \strng{fullhash}{SMET1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2020 IEEE/ACM International Conference On Computer Aided
+  Design (ICCAD)}
+    \field{pages}{1\bibrangedash 6}
+    \field{title}{Building OpenLANE: A 130nm OpenROAD-based Tapeout- Proven
+  Flow : Invited Paper}
+    \field{year}{2020}
+  \endentry
+
+  \entry{asic-2}{inproceedings}{}
+    \name{author}{6}{}{%
+      {{hash=GMR}{%
+         family={Guthaus},
+         familyi={G\bibinitperiod},
+         given={Matthew\bibnamedelima R},
+         giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=SJE}{%
+         family={Stine},
+         familyi={S\bibinitperiod},
+         given={James\bibnamedelima E},
+         giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=AS}{%
+         family={Ataei},
+         familyi={A\bibinitperiod},
+         given={Samira},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=CB}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Brian},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=WB}{%
+         family={Wu},
+         familyi={W\bibinitperiod},
+         given={Bin},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Sarwar},
+         familyi={S\bibinitperiod},
+         given={Mehedi},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{GMR+1}
+    \strng{fullhash}{GMRSJEASCBWBSM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{2016 IEEE/ACM International Conference on Computer-Aided
+  Design (ICCAD)}
+    \field{pages}{1\bibrangedash 6}
+    \field{title}{OpenRAM: An open-source memory compiler}
+    \field{year}{2016}
+  \endentry
+
+  \entry{chap3-2}{article}{}
+    \name{author}{14}{}{%
+      {{hash=ZJ}{%
+         family={Zhuang},
+         familyi={Z\bibinitperiod},
+         given={Jinming},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LJ}{%
+         family={Lau},
+         familyi={L\bibinitperiod},
+         given={Jason},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=YH}{%
+         family={Ye},
+         familyi={Y\bibinitperiod},
+         given={Hanchen},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=YZ}{%
+         family={Yang},
+         familyi={Y\bibinitperiod},
+         given={Zhuoping},
+         giveni={Z\bibinitperiod},
+      }}%
+      {{hash=JS}{%
+         family={Ji},
+         familyi={J\bibinitperiod},
+         given={Shixin},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=LJ}{%
+         family={Lo},
+         familyi={L\bibinitperiod},
+         given={Jack},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=DK}{%
+         family={Denolf},
+         familyi={D\bibinitperiod},
+         given={Kristof},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=NS}{%
+         family={Neuendorffer},
+         familyi={N\bibinitperiod},
+         given={Stephen},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=JA}{%
+         family={Jones},
+         familyi={J\bibinitperiod},
+         given={Alex},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=HJ}{%
+         family={Hu},
+         familyi={H\bibinitperiod},
+         given={Jingtong},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SY}{%
+         family={Shi},
+         familyi={S\bibinitperiod},
+         given={Yiyu},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=CD}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Deming},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=CJ}{%
+         family={Cong},
+         familyi={C\bibinitperiod},
+         given={Jason},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=ZP}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Peipei},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Association for Computing Machinery}%
+    }
+    \strng{namehash}{ZJ+1}
+    \strng{fullhash}{ZJLJYHYZJSLJDKNSJAHJSYCDCJZP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1145/3686163
+    \endverb
+    \field{issn}{1936-7406}
+    \field{number}{3}
+    \field{title}{CHARM 2.0: Composing Heterogeneous Accelerators for Deep
+  Learning on Versal ACAP Architecture}
+    \verb{url}
+    \verb https://doi.org/10.1145/3686163
+    \endverb
+    \field{volume}{17}
+    \list{location}{1}{%
+      {New York, NY, USA}%
+    }
+    \field{journaltitle}{ACM Trans. Reconfigurable Technol. Syst.}
+    \field{month}{09}
+    \field{year}{2024}
+  \endentry
+
+  \entry{chap3-1}{article}{}
+    \name{author}{4}{}{%
+      {{hash=MCS}{%
+         family={Mummidi},
+         familyi={M\bibinitperiod},
+         given={Chandra\bibnamedelima Sekhar},
+         giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=FVC}{%
+         family={Ferreira},
+         familyi={F\bibinitperiod},
+         given={Victor\bibnamedelima C},
+         giveni={V\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Srinivasan},
+         familyi={S\bibinitperiod},
+         given={Sudarshan},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=KS}{%
+         family={Kundu},
+         familyi={K\bibinitperiod},
+         given={Sandip},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ACM New York, NY}%
+    }
+    \strng{namehash}{MCS+1}
+    \strng{fullhash}{MCSFVCSSKS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{1\bibrangedash 22}
+    \field{title}{Highly efficient self-checking matrix multiplication on tiled
+  amx accelerators}
+    \field{volume}{21}
+    \field{journaltitle}{ACM Transactions on Architecture and Code
+  Optimization}
+    \field{year}{2024}
+  \endentry
+
+  \entry{chap4-1}{manual}{}
+    \name{author}{1}{}{%
+      {{hash=X}{%
+         family={{Xilinx Inc.}},
+         familyi={X\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{X2}
+    \strng{fullhash}{X2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{note}{DS180, v1.29, Accessed: May 2025}
+    \field{title}{7 Series FPGAs Data Sheet: Overview (XC7A35T-CPG236)}
+    \verb{url}
+    \verb https://docs.xilinx.com/r/en-US/ds180_7Series_Overview
+    \endverb
+    \list{location}{1}{%
+      {San Jose, CA, USA}%
+    }
+    \list{institution}{1}{%
+      {Xilinx Inc.}%
+    }
+    \field{year}{2022}
+  \endentry
+
+  \entry{chap4-2}{manual}{}
+    \name{author}{1}{}{%
+      {{hash=X}{%
+         family={{Xilinx Inc.}},
+         familyi={X\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{X2}
+    \strng{fullhash}{X2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{note}{UG903, Version 2022.1, Accessed: May 2025}
+    \field{title}{Vivado Design Suite User Guide: Using Constraints (Pblock
+  Constraints)}
+    \verb{url}
+    \verb https://docs.xilinx.com/r/en-US/ug903-vivado-using-constraints
+    \endverb
+    \list{location}{1}{%
+      {San Jose, CA, USA}%
+    }
+    \list{institution}{1}{%
+      {Xilinx Inc.}%
+    }
+    \field{year}{2022}
+  \endentry
+
+  \entry{chap5-1}{manual}{}
+    \name{author}{1}{}{%
+      {{hash=I}{%
+         family={{Intel Corporation}},
+         familyi={I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{I1}
+    \strng{fullhash}{I1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{note}{Document Number: 210456, Accessed: May 2025}
+    \field{title}{Intel\textsuperscript{\textregistered}
+  Core\textsuperscript{TM} i7-12700K Processor (25M Cache, up to 5.00 GHz)
+  Product Specifications}
+    \verb{url}
+    \verb https://ark.intel.com/content/www/us/en/ark/products/134594/intel-cor
+    \verb e-i712700k-processor-25m-cache-up-to-5-00-ghz.html
+    \endverb
+    \list{location}{1}{%
+      {Santa Clara, CA, USA}%
+    }
+    \list{institution}{1}{%
+      {Intel Corporation}%
+    }
+    \field{year}{2023}
+  \endentry
+
+  \entry{chap5-2}{manual}{}
+    \name{author}{1}{}{%
+      {{hash=N}{%
+         family={{NVIDIA Corporation}},
+         familyi={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{N1}
+    \strng{fullhash}{N1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{note}{Version 1.0, Accessed: May 2025}
+    \field{title}{NVIDIA A100 Tensor Core GPU Architecture}
+    \verb{url}
+    \verb https://resources.nvidia.com/en-us-tensor-core/nvidia-ampere-architec
+    \verb ture-whitepaper
+    \endverb
+    \list{location}{1}{%
+      {Santa Clara, CA, USA}%
+    }
+    \list{institution}{1}{%
+      {NVIDIA Corporation}%
+    }
+    \field{year}{2020}
+  \endentry
+\enddatalist
+\endinput

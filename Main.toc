@@ -1,0 +1,147 @@
+\contentsline {chapter}{Abstract}{i}{chapter*.1}%
+\contentsline {chapter}{List of Figures}{vii}{chapter*.2}%
+\contentsline {chapter}{List of Tables}{viii}{chapter*.3}%
+\contentsline {chapter}{\numberline {1}Introduction to FPGA Architectures for Machine Learning and Hardware Acceleration}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduction}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Motivation}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Problem statement}{4}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Objectives}{5}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Literature Review}{5}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Related Work on FPGA Architectural Exploration for ML Workloads}{5}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Related Work on PCA and SVD Accelerators}{7}{subsection.1.5.2}%
+\contentsline {section}{\numberline {1.6}Brief Methodology of the project}{11}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Organization of the report}{12}{section.1.7}%
+\contentsline {chapter}{\numberline {2}Theoretical Foundations and Technical Prerequisites}{13}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Fundamentals of FPGA Architecture}{14}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Configurable Logic and Logic Clusters}{14}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Programmable Routing Architecture}{16}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Embedded Arithmetic and Carry Chains}{18}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}On Chip Memory: BRAM and LUT-RAM}{18}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}DSP Hard Blocks}{19}{subsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.1.6}Programmable IO Blocks}{19}{subsection.2.1.6}%
+\contentsline {section}{\numberline {2.2}Target FPGA Architectures Used in the Study}{19}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Intel Stratix-10-like Architecture}{20}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}4-bit Single Carry Chain Architecture}{20}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}4-bit Double Carry Chain Architecture}{21}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Summary of Architectural Differences}{22}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}HDL Benchmarks Employed in the Study}{22}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}2-Level Adder Trees}{22}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}3-Level Adder Trees}{23}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Unpipelined FIR Filter with Hardblock Multipliers}{24}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Pipelined FIR Filter with Hardblock Multipliers}{25}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Unpipelined FIR Filter with Carry Chains}{26}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}Pipelined FIR Filter on Carry Chains}{26}{subsection.2.3.6}%
+\contentsline {section}{\numberline {2.4}Architecture-Benchmark Evaluation Metrics}{28}{section.2.4}%
+\contentsline {section}{\numberline {2.5}VTR Toolchain}{29}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Principal Component Analysis (PCA)}{31}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Introduction and Evaluation Metrics}{31}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Case Study on Principal Component Analysis}{34}{subsection.2.6.2}%
+\contentsline {section}{\numberline {2.7}Matrix Multiplication Techniques on Hardware}{37}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Singular Value Decomposition on Hardware}{39}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Jacobi Eigenvalue Decomposition}{41}{subsection.2.8.1}%
+\contentsline {section}{\numberline {2.9}Introduction to CORDICs}{42}{section.2.9}%
+\contentsline {section}{\numberline {2.10}Cache Architecture and Modeling}{44}{section.2.10}%
+\contentsline {subsection}{\numberline {2.10.1}Direct Mapped Caches}{44}{subsection.2.10.1}%
+\contentsline {subsection}{\numberline {2.10.2}Cache Write Miss Policies}{45}{subsection.2.10.2}%
+\contentsline {subsubsection}{Write-Allocate Write-Miss Policy}{45}{section*.5}%
+\contentsline {subsubsection}{Write-Around Write-Miss Policy}{45}{section*.6}%
+\contentsline {subsection}{\numberline {2.10.3}Cache Modeling Benchmarks}{46}{subsection.2.10.3}%
+\contentsline {subsubsection}{LINPACK SAXPY Benchmark}{46}{section*.7}%
+\contentsline {subsubsection}{Livermore Benchmark}{46}{section*.8}%
+\contentsline {subsection}{\numberline {2.10.4}CACTI Cache Modeler}{46}{subsection.2.10.4}%
+\contentsline {section}{\numberline {2.11}FPGA Design Flow}{47}{section.2.11}%
+\contentsline {subsection}{\numberline {2.11.1}RTL Entry}{48}{subsection.2.11.1}%
+\contentsline {subsection}{\numberline {2.11.2}Behavioural Simulation}{49}{subsection.2.11.2}%
+\contentsline {subsection}{\numberline {2.11.3}Synthesis}{49}{subsection.2.11.3}%
+\contentsline {subsection}{\numberline {2.11.4}Post Synthesis Simulation}{50}{subsection.2.11.4}%
+\contentsline {subsection}{\numberline {2.11.5}Implementation}{50}{subsection.2.11.5}%
+\contentsline {subsection}{\numberline {2.11.6}Post Implementation Simulation}{51}{subsection.2.11.6}%
+\contentsline {subsection}{\numberline {2.11.7}Xilinx Design Constraints}{51}{subsection.2.11.7}%
+\contentsline {subsection}{\numberline {2.11.8}Bitstream Generation}{52}{subsection.2.11.8}%
+\contentsline {section}{\numberline {2.12}ASIC Design Flow on Openlane and OpenRAM}{53}{section.2.12}%
+\contentsline {subsection}{\numberline {2.12.1}Openlane Architecture and Flow}{53}{subsection.2.12.1}%
+\contentsline {subsection}{\numberline {2.12.2}OpenRAM Integration}{54}{subsection.2.12.2}%
+\contentsline {chapter}{\numberline {3}Design Methodology}{56}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Specifications of FPGA Architectural Exploration}{57}{section.3.1}%
+\contentsline {section}{\numberline {3.2}FPGA Architectural Modeling in VTR}{59}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}CLB Architecture and Carry Chain Design}{59}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Routing and Interconnects}{60}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Hardblocks and Memory Modeling}{60}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Methodology for FPGA Architectural Exploration using VTR}{61}{section.3.3}%
+\contentsline {section}{\numberline {3.4}FPGA Analysis Metrics Equations}{63}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Operational Frequency}{63}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Critical Path Delay}{63}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Area in MWTA Units}{64}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Architecture of the Manojavam Accelerator}{64}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Matrix Multiplication Engine}{65}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Jacobian Unit Architecture}{69}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Data Lookup Engine (DLE)}{69}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}CORDIC Kernels}{70}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Givens Engine}{71}{subsection.3.7.3}%
+\contentsline {section}{\numberline {3.8}Cache Subsystem}{72}{section.3.8}%
+\contentsline {section}{\numberline {3.9}Controller Design and Hierarchy}{74}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}Top-Level Controller}{74}{subsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.9.2}LHS Shared Cache Controller}{74}{subsection.3.9.2}%
+\contentsline {subsection}{\numberline {3.9.3}Private RHS Cache Controller Complex}{75}{subsection.3.9.3}%
+\contentsline {subsection}{\numberline {3.9.4}Jacobian Controller}{75}{subsection.3.9.4}%
+\contentsline {chapter}{\numberline {4}Implementation}{77}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Docker Container for VTR}{78}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Architectural Description}{79}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Intel Stratix-10 Architecture}{79}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}4-Bit Single Carry Chain Architecture}{80}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}4-Bit Double Carry Chain Architecture}{80}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Benchmark Creation}{80}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Adder Tree Benchmarks}{81}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}FIR Filter Benchmarks}{81}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Modified FIR Benchmarks with Wallace Tree Multipliers}{81}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Shell Automation Scripts}{82}{section.4.4}%
+\contentsline {section}{\numberline {4.5}BLIF File Generation using Parmys and ABC}{82}{section.4.5}%
+\contentsline {section}{\numberline {4.6}VPR Pack, Place \& Route}{83}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Architecture Timing and Area Analysis}{84}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Target FPGA Platform for Manojavam}{85}{section.4.8}%
+\contentsline {section}{\numberline {4.9}RTL Entry and Behavioral Simulation}{86}{section.4.9}%
+\contentsline {section}{\numberline {4.10}Xilinx Design Constraints}{87}{section.4.10}%
+\contentsline {subsection}{\numberline {4.10.1}I/O Constraints}{87}{subsection.4.10.1}%
+\contentsline {subsection}{\numberline {4.10.2}Clock Constraints}{87}{subsection.4.10.2}%
+\contentsline {subsection}{\numberline {4.10.3}PBlock Floorplanning Constraints}{87}{subsection.4.10.3}%
+\contentsline {section}{\numberline {4.11}Synthesis}{88}{section.4.11}%
+\contentsline {subsection}{\numberline {4.11.1}Post Synthesis Simulations}{88}{subsection.4.11.1}%
+\contentsline {subsection}{\numberline {4.11.2}Utilization and Power Reports}{88}{subsection.4.11.2}%
+\contentsline {subsection}{\numberline {4.11.3}Timing Summaries}{89}{subsection.4.11.3}%
+\contentsline {section}{\numberline {4.12}Implementation}{89}{section.4.12}%
+\contentsline {subsection}{\numberline {4.12.1}Post Implementation Simulations}{89}{subsection.4.12.1}%
+\contentsline {subsection}{\numberline {4.12.2}Utilization and Power Reports}{89}{subsection.4.12.2}%
+\contentsline {section}{\numberline {4.13}Openlane ASIC Implementation}{90}{section.4.13}%
+\contentsline {subsection}{\numberline {4.13.1}Openlane RTL Entry and Configuration File}{90}{subsection.4.13.1}%
+\contentsline {subsection}{\numberline {4.13.2}Integration with SRAM MAcros}{90}{subsection.4.13.2}%
+\contentsline {subsection}{\numberline {4.13.3}Floorplanning}{91}{subsection.4.13.3}%
+\contentsline {subsection}{\numberline {4.13.4}Placement}{91}{subsection.4.13.4}%
+\contentsline {subsection}{\numberline {4.13.5}Clock Tree Synthesis (CTS)}{91}{subsection.4.13.5}%
+\contentsline {subsection}{\numberline {4.13.6}Routing}{91}{subsection.4.13.6}%
+\contentsline {subsection}{\numberline {4.13.7}Signoff}{92}{subsection.4.13.7}%
+\contentsline {subsection}{\numberline {4.13.8}Analysis and Reports}{92}{subsection.4.13.8}%
+\contentsline {chapter}{\numberline {5}Results \& Discussions}{93}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Results from FPGA Architectural Exploration}{94}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Critical Path Delays in Adder Trees}{94}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Area in Adder Trees}{95}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Delay vs Area in FIR Filters}{96}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Delay-Area Product of Unpipelined Wallace Tree based FIR Filters}{97}{subsection.5.1.4}%
+\contentsline {subsection}{\numberline {5.1.5}Peak Operational Frequency Analysis}{99}{subsection.5.1.5}%
+\contentsline {section}{\numberline {5.2}FPGA Implementation of Manojavam}{99}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Resource Consumption}{99}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Power Consumption}{100}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Timing Report and Summaries}{101}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Accelerator Floorplanning}{102}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Comparative Runtime Analysis of PCA on CPU, GPU, and Manojavam Accelerator}{104}{subsection.5.2.5}%
+\contentsline {subsubsection}{Matrix Multiplication (MM) Comparison}{104}{section*.9}%
+\contentsline {subsubsection}{Singular Value Decomposition (SVD) Comparison}{105}{section*.10}%
+\contentsline {subsubsection}{Total Runtime Comparison (MM + SVD)}{106}{section*.11}%
+\contentsline {subsubsection}{Detailed Performance Analysis}{107}{section*.12}%
+\contentsline {section}{\numberline {5.3}ASIC Implementation of Manojavam}{108}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Synthesis Reports}{108}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Power Reports}{110}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Routing Results}{111}{subsection.5.3.3}%
+\contentsline {chapter}{\numberline {6}Conclusion and Future Scope}{113}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Conclusion}{114}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Future Scope}{115}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Learning Outcomes of the Project}{115}{section.6.3}%

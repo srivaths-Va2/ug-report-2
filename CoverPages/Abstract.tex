@@ -1,0 +1,33 @@
+\addcontentsline{toc}{chapter}{Abstract}\vspace{-1cm}
+%Border
+\begin{tikzpicture}[remember picture, overlay]
+  \draw[line width = 4pt] ($(current page.north west) + (0.75in,-0.75in)$) rectangle ($(current page.south east) + (-0.75in,0.75in)$);
+\end{tikzpicture}
+
+%% BEGIN ABSTRACT HERE
+Machine learning (ML) workloads on edge devices demand high performance with energy efficiency—needs poorly met by general-purpose processors and power-hungry GPUs. FPGAs, with their parallelism and configurability, offer a promising alternative, yet current architectures and accelerator designs remain suboptimal for ML. This report addresses these challenges through a two-part solution: (1) architectural space exploration of FPGA fabrics tailored for ML benchmarks, and (2) the design and realization of Manojavam, a domain-specific PCA accelerator. Together, they aim to enhance ML performance using fine-grained architectural choices and application-driven hardware specialization.
+
+The objectives include evaluating carry chain-based FPGA architectures (single and double chain) against DSP-heavy designs, particularly for low-precision and approximate computing. In parallel, we indigenously designed and implemented the Manojavam accelerator entirely in RTL, with a fully original architecture tailored for matrix-centric ML workloads. It features 8× 4×4 TPU-style systolic arrays for matrix multiplication, a novel Jacobian Unit for eigendecomposition via the Jacobi method, and a dual-tier cache hierarchy designed to support block streaming and operand reuse. A key novelty of Manojavam lies in its ability to execute both matrix multiplication and SVD within a single unified hardware pipeline, enabling complete PCA acceleration in a standalone and streaming-optimized design.
+
+Simulation and synthesis were conducted using the VTR toolchain (for architectural benchmarks), Vivado (for FPGA flow), and OpenLane (for ASIC flow). Benchmarks included FIR filters and bit-serial MACs, and test matrices from 1000×4 to 1000×1024. Results showed Manojavam running at 200 MHz with ~1.2W power use. Carry chain architectures consistently outperformed hard block designs in ML tasks, and Manojavam showed significant latency and energy improvements over CPU/GPU baselines.
+
+Post-simulation, the design was validated on Xilinx Artix-7, with successful RTL integration, floorplanning, timing closure, and GDSII generation via OpenLane, confirming hardware viability.
+
+\begin{comment}
+	content...
+
+Highlights of significant contributions: One page with 3 to 4 paragraphs\\
+
+Paragraph 1: Importance and relevance of Topic, reported issues and limitations of the topic in performance or computation etc, issues involved in those limitations, need for addressing those issues and a short note on how that is addressed in this report.
+
+
+Paragraph 2 Objectives of this work, short note on algebraic methods used and formulations achieved, computational procedures developed. \gls{ic}.
+
+
+Paragraph 3: Description of simulation procedure including SW tools used and choice of test cases. Short note on results achieved and significant highlights of improvements if any in terms of percentage , for example the architecture presented in this report shows 22 \% improve in power consumption as compared to the previously reported articles.
+\gls{ic}
+
+Paragraph 4:The last para needed only if emulation (after simulation) or Hardware developed to validate simulation results in para 3. 
+\end{comment}
+
+\pagebreak

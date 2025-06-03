@@ -1,0 +1,50 @@
+\chapter{Conclusion and Future Scope}
+
+\section{Conclusion}
+%% BEGIN CONTENT HERE
+This project was undertaken to explore the impact of FPGA architecture on machine learning (ML) acceleration and to design a custom PCA accelerator optimized for matrix-intensive workloads. The project was divided into two major objectives: (1) evaluating custom FPGA architectures using the VTR toolchain, with a focus on 4-bit carry chain structures for arithmetic-heavy benchmarks, and (2) designing and implementing Manojavam, a systolic-array-based PCA accelerator capable of executing covariance matrix computation and eigendecomposition on FPGA and ASIC platforms. The project aimed to bridge architectural exploration with application-specific hardware design, particularly targeting high-throughput matrix multiplications and Jacobi-based SVD.
+
+The FPGA architecture exploration was carried out using 2-level and 3-level adder trees, and FIR filter benchmarks—both pipelined and unpipelined—mapped to three target architectures: Intel Stratix-10, 4-bit single carry chain, and 4-bit double carry chain. These were modeled and synthesized using VTR’s XML-based architecture definitions and simulated using PARMYS and ABC. Meanwhile, Manojavam was fully realized in Verilog RTL and implemented on the Artix-7 FPGA and synthesized to GDSII using the OpenLane ASIC flow. A custom memory subsystem with shared and private caches, a tiled systolic matrix multiplication engine, and a Jacobi rotation-based eigendecomposition unit were developed to support high-performance PCA computation.
+
+The objectives were met successfully. FPGA results showed that carry chain architectures—especially the 4-bit double carry chain—offered significant delay and area benefits over Stratix-10 for arithmetic-centric workloads. Manojavam was floorplanned and deployed on a mid-range Artix-7 FPGA, achieving 200 MHz operational frequency and 1.2 W power consumption, with a throughput of 25.6 GOPS. In ASIC implementation, Manojavam synthesized to ~29K cells, occupied ~297K $\mu m^{2}$ area with 50\% utilization, and dissipated only 154 mW, while passing DRC, LVS, and antenna checks. Runtime analysis of PCA showed that Manojavam outperformed a high-end NVIDIA A100 GPU and an Intel i7 CPU by up to 18× in total execution time on high-dimensional datasets.
+
+In conclusion, the project validates that custom carry chain architectures are superior for low-precision ML arithmetic workloads, and Manojavam effectively exploits this characteristic in both FPGA and ASIC realizations. It demonstrates a complete design flow—from architectural modeling and benchmarking to physical implementation—offering a specialized yet generalizable hardware solution for PCA acceleration in edge and embedded ML systems.
+
+\begin{comment}
+This chapter should not contain an introduction paragraph like other chapters. You can directly write conclusion of the work done under this section. Typically this section can have 3 to 4 paragraphs. 
+
+First paragraph should bring in the scenario of the project and every objective should be explained here.
+
+Second paragraph should say how the objectives are implemented and achieved.
+
+Last paragraph should draw the conclusions from each objective with quantitative results, performance improvement etc. 
+\end{comment}
+
+\section{Future Scope}
+%% BEGIN CONTENT HERE
+While Manojavam was successfully implemented and evaluated, several areas exist for improvement and extension. First, the matrix multiplication engine currently uses 8-bit precision; future iterations could explore mixed-precision or floating-point support for broader ML applicability. The Jacobi unit, though efficient, can be further optimized for convergence speed through approximate rotation strategies or hardware scheduling of dominant elements. Integration with on-chip DMA controllers and high-speed memory interfaces (e.g., AXI or HBM) could reduce I/O bottlenecks, particularly in real-time applications. On the ASIC side, timing reports were not generated due to toolchain limitations; future work could refine the OpenLane flow to extract and optimize for worst-case slack. Finally, extending the architecture to support full-featured PCA pipelines—including whitening and dimensionality selection—would make Manojavam more self-contained and deployment-ready.
+
+\begin{comment}
+Briefly discuss the constraints and limitations of the project and state the possibilities of extending the work in future.
+\end{comment}
+
+\section{Learning Outcomes of the Project}
+\begin{itemize}
+	\item Gained hands-on experience with FPGA architecture modeling using the VTR toolchain.
+	\item Learned complete RTL-to-GDSII design flow using OpenLane, including floorplanning, placement, routing, and signoff.
+	\item Developed and synthesized a domain-specific accelerator for matrix multiplication and SVD computation.
+	\item Analyzed trade-offs between commercial FPGAs and custom architecture through benchmark-driven evaluation.
+	\item Acquired knowledge in cache hierarchy design and dataflow optimization for systolic arrays.
+	\item Built automation scripts and workflows to scale benchmarking across architectures.
+	\item Understood the interplay between architectural decisions and algorithmic behavior in hardware.
+\end{itemize}
+
+
+\begin{comment}
+	\begin{itemize}
+		\item List the learning outcomes here
+		\item List a minimum of 5 learning outcomes
+	\end{itemize}
+\end{comment}
+
+

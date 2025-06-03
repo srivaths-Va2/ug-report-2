@@ -1,0 +1,190 @@
+\chapter{Implementation}
+Robust implementation frameworks form the foundation of both architectural exploration and hardware accelerator development. For the FPGA design exploration project, the Verilog-to-Routing (VTR) toolchain is deployed within a Docker-based environment to ensure reproducibility and consistency. Benchmark circuits are synthesized using Yosys and ABC, followed by placement, routing, and detailed metric analysis through VPR. In parallel, the Manojavam PCA accelerator is realized through a modular RTL design approach, incorporating optimized matrix multiplication engines, cache subsystems, and synchronized controller hierarchies. This chapter presents the systematic workflow and technical steps followed in translating both conceptual designs into functioning and analyzable implementations.
+
+\begin{comment}
+\indent\indent From Chapter 2 onwards, every chapter should start with an introduction paragraph. This paragraph should brief about the flow of the chapter. This introduction can be limited within 4 to 5 sentences. The chapter heading should be appropriately modified (a sample heading is shown for this chapter).But don't start the introduction paragraph in the chapters 2 to end with "This chapter deals with....". Instead you should bring in the highlights of the chapter in the introduction paragraph. 
+\end{comment}
+
+\section{Docker Container for VTR}
+The Verilog-to-Routing (VTR) toolchain, which encompasses multiple complex software components including synthesis, technology mapping, packing, placement, and routing tools, requires a carefully configured software environment to function correctly. To simplify environment setup and ensure reproducibility, we leveraged a pre-built Docker container specifically designed for VTR execution. This approach abstracts away the challenges of dependency management, version compatibility, and operating system configurations, enabling a seamless and consistent platform for architectural exploration.
+
+From an implementation perspective, the Docker container encapsulates the entire VTR toolchain along with all necessary dependencies, including required libraries, compilers, and scripts. By using Docker, the VTR environment becomes portable and can be deployed on any host system that supports Docker, whether it is a local workstation, a remote server, or a cloud-based instance. This containerized setup eliminates the need for manual installation or configuration of individual components, which can be error-prone and time-consuming.
+
+To use the Docker container, we pulled the official or community-maintained VTR image from a Docker repository. The container was then instantiated on the target machine, providing an isolated and consistent execution environment. Input files such as architecture XML descriptions, benchmark Verilog files, and configuration scripts were mounted as volumes inside the container, allowing easy access and modification without rebuilding the image.
+
+The container also facilitates batch automation by allowing execution of shell scripts and experiment workflows inside a controlled environment. This is particularly beneficial when running large-scale FPGA architectural explorations requiring multiple iterations of synthesis, packing, placement, and routing. Additionally, Docker’s resource management options enable allocation of CPU cores and memory to the container, ensuring predictable performance and efficient utilization of hardware resources.
+
+Overall, using a Docker container for VTR significantly improved the reliability and reproducibility of our architectural exploration experiments. It simplified collaboration and sharing of the experimental setup with other researchers, and reduced the overhead of troubleshooting environment-related issues. This containerized approach aligns well with best practices in modern hardware research workflows, where toolchain consistency and portability are crucial.
+
+\section{Architectural Description}
+The Verilog-to-Routing (VTR) framework enables architectural exploration of FPGA designs through configurable XML-based architecture description files. These files define the fundamental components of the FPGA fabric—such as logic blocks, routing architecture, I/O configurations, and DSPs—and form the foundation for synthesis, placement, and routing experiments. For this project, three distinct FPGA architectures were selected and implemented: Intel Stratix-10 (as a representative of commercial high-performance FPGAs), a custom 4-bit Single Carry Chain architecture, and a 4-bit Double Carry Chain architecture. Each architecture was described in its respective XML file, guided by the syntax and schema provided in the VTR Architecture Reference Manual.
+
+\subsection{Intel Stratix-10 Architecture}
+The Stratix-10 architecture description was adapted from the official Stratix10 architecture XML file in the VTR repository. This model includes a wide range of hardened elements including DSP blocks, dual-port RAMs, and fracturable logic elements. The configurable logic blocks (CLBs) consist of Adaptive Logic Modules (ALMs), each capable of handling variable input widths and logic functions. The routing fabric is highly segmented and features diverse switch block patterns to mimic the physical routing complexities found in real Intel FPGAs. From an implementation perspective, this architecture provides a high-performance baseline for benchmarking, reflecting a production-grade FPGA with mature logic synthesis capabilities.
+
+\subsection{4-Bit Single Carry Chain Architecture}
+The single chain carry architecture models a lightweight, arithmetic-friendly FPGA optimized for small-bitwidth operations. Implemented in the 4bit-adder-single-chain-arch.xml file, this design features logic blocks with embedded 4-bit adders configured in a serial carry propagation style. Each logic block supports straightforward arithmetic operations and basic logic functions, with carry-in and carry-out ports connected in a linear fashion. The design focuses on compact resource allocation and favors applications involving low-precision neural network computations or signal processing tasks. This architecture prioritizes minimum delay in bit-serial arithmetic and efficient area usage.
+
+\subsection{4-Bit Double Carry Chain Architecture}
+Expanding upon the single chain model, the double chain carry architecture—described in 4bit-adder-double-chain-arch.xml—implements dual carry chains within each logic block. This allows parallel evaluation of two 4-bit additions or partial products, enhancing throughput for arithmetic-heavy workloads. Each logic element includes two cascaded carry propagation paths and supports conditional logic evaluation based on runtime selection of carry routes. This architecture is particularly well-suited for accelerating MAC (multiply-accumulate) operations, making it highly applicable for machine learning accelerators and DSP workloads. Routing resources were adjusted accordingly to support higher interconnect demand due to parallelism.
+
+\section{Benchmark Creation}
+To evaluate the performance and suitability of the target FPGA architectures modeled in VTR, a diverse set of Verilog-based benchmark circuits was created. These benchmarks were selected to stress arithmetic and logic capabilities, especially in the context of low-bitwidth machine learning primitives and digital signal processing (DSP) functions. The primary benchmark types include adder tree networks, FIR filters, and modified FIR filters with custom arithmetic structures.
+
+\subsection{Adder Tree Benchmarks}
+Adder tree benchmarks serve as fundamental arithmetic units and are frequently encountered in accumulation operations within MAC units, dot products, and tree-based summations. The benchmarks were implemented using combinational adder trees of varying depths and bit-widths. Each benchmark was unrolled into either 2-level or 3-level structures, consisting of multiple full adders arranged in a tree-like hierarchy. These benchmarks provided insights into carry propagation, logic packing efficiency, and routing overheads in each FPGA architecture.
+
+\subsection{FIR Filter Benchmarks}
+Finite Impulse Response (FIR) filters are core components in DSP workloads and provide a structured combination of multipliers and adders. Standard FIR benchmarks were written in Verilog to model a multiply-and-accumulate pipeline. Variants were created for different tap counts (e.g., 4-tap, 8-tap), and both pipelined and unpipelined versions were generated. Multiplications were performed using the standard \textbf{(*)} operator, which allowed synthesis tools to map them to either LUT-based or DSP-based implementations depending on the target architecture. These filters test both arithmetic depth and the interconnection complexity of logic blocks.
+
+\subsection{Modified FIR Benchmarks with Wallace Tree Multipliers}
+To emulate the structure of arithmetic accelerators and explore resource-level optimization, modified FIR benchmarks were created by replacing the built-in multiplication operator with an explicitly constructed Wallace Tree multiplier. The Wallace Tree multiplier was designed in Vivado using 1-bit multipliers and structured carry-save adder networks, enabling precise control over the hardware implementation.
+
+A dedicated Python script was developed to automate the integration of this Wallace Tree design into all existing FIR filter benchmarks. This script scanned the original FIR Verilog files, identified the multiplication expressions, and replaced them with instances of the custom Wallace Tree module. It then generated new benchmark Verilog files with these modifications, which were placed in a separate directory for clarity and version control. Each modified benchmark preserved the original filter behavior but exhibited different synthesis and placement characteristics, allowing for a more nuanced comparison of how each target FPGA architecture handled complex arithmetic datapaths.
+
+These benchmark variants—standard, pipelined, and Wallace Tree-based—were compiled into a unified test suite and systematically mapped to all three target architectures using automated flow scripts. This ensured consistent synthesis conditions and enabled direct performance comparisons across architectural designs.
+
+\section{Shell Automation Scripts}
+Mapping each benchmark design to the various FPGA architecture descriptions using the VTR flow is a multi-step process involving synthesis, BLIF generation, packing, placement, routing, and result analysis. Manually repeating these steps for every benchmark and architecture combination becomes highly tedious, especially when dealing with numerous benchmark variants and multiple architecture XML files. To overcome this challenge and eliminate the need for repeated terminal commands, automation scripts were developed to handle the entire benchmarking process.
+
+These shell scripts enabled full traversal of all benchmark files and systematically mapped them to each of the target FPGA architectures. The scripts internally invoked Yosys to synthesize each Verilog benchmark into a BLIF representation, followed by automatic invocation of VPR using the appropriate architecture XML files. The resulting timing, area, and routing reports were generated and logged in structured output folders for each benchmark-architecture pair.
+
+By automating the architecture-benchmark mapping process, the scripts significantly reduced manual intervention, ensured consistency in execution, and sped up the benchmarking effort. The generated reports were organized for post-processing and allowed for easy retrieval and comparison across architecture variants. This automation proved instrumental in enabling rapid design space exploration and in maintaining reproducibility across experimental runs.
+
+\section{BLIF File Generation using Parmys and ABC}
+In the FPGA architectural exploration flow using VTR, generating BLIF (Berkeley Logic Interchange Format) files is a crucial intermediate step that connects the high-level Verilog design of a benchmark to the architectural specification of a target FPGA. This transformation is handled by a synthesis pipeline involving Parmys and ABC, which together perform elaboration, optimization, and technology mapping of the Verilog source.
+
+Parmys is a lightweight and modular front-end Verilog parser and elaboration tool developed as a plugin to interface with the VTR ecosystem. Unlike traditional synthesis tools, Parmys focuses on quickly parsing behavioral and structural Verilog, flattening the hierarchy, and converting the design into an intermediate gate-level netlist that is suitable for logic optimization and mapping. It is designed with integration into VTR in mind, ensuring that the logic structures it produces align closely with VTR's architectural models, particularly for LUT-based FPGA fabrics.
+
+Once the Verilog benchmark is parsed and elaborated by Parmys, the resulting netlist is handed over to ABC, a powerful tool for logic synthesis and technology mapping. ABC optimizes the logic through a series of rewriting, resubstitution, and balancing steps, and then maps the optimized logic to a target logic family, typically defined by K-input LUTs (e.g., 4-LUTs or 6-LUTs), based on the architecture definition. This technology-mapped representation is then output as a .blif file, which serves as the input to the VPR (Versatile Place and Route) tool in the next phase of the flow.
+
+While the architectural XML description is not directly consumed during BLIF generation, it influences the synthesis constraints. For example, if the target FPGA architecture supports only 4-input LUTs (as in the 4-bit adder architectures), ABC is invoked with a corresponding LUT size parameter to ensure the output is structurally compatible with the architecture.
+
+From an implementation standpoint, the synthesis flow begins by passing each Verilog benchmark through Parmys, which performs parsing and elaboration. The intermediate design is then piped into ABC, with appropriate mapping commands, to produce the final .blif file. This entire process is integrated into automation scripts to handle multiple benchmarks across various target architectures. The resulting BLIF files serve as architecture-aware netlists that are used by VPR for placement, routing, and physical resource analysis.
+
+This Parmys+ABC synthesis flow ensures consistency, automation, and compatibility across the exploration pipeline, enabling rapid evaluation of benchmark behavior on custom FPGA architectures.
+
+\section{VPR Pack, Place \& Route}
+After generating the BLIF netlist using Parmys and ABC, the next phase of the VTR flow involves performing pack, place, and route operations using the Versatile Place and Route (VPR) tool. This process translates the abstract netlist into a concrete physical mapping on the FPGA grid defined by the target architecture.
+
+The first stage, packing, groups logical elements such as LUTs, flip-flops, and carry logic into clusters called logic blocks. VPR uses the architecture XML file to determine the permissible packing patterns, which differ across the Stratix-10 and the custom 4-bit carry chain architectures. This step ensures that logic elements are organized into valid cluster configurations before proceeding to physical layout.
+
+Once packing is completed, VPR moves to placement, where each packed cluster is assigned a position on the FPGA fabric. The placement algorithm attempts to minimize critical path delay and wire length, taking into account the architecture’s grid layout and connectivity constraints. Placement quality directly impacts timing, making this stage essential for performance optimization.
+
+The final step is routing, in which the placed logic blocks are interconnected using the FPGA's routing resources. VPR constructs routing trees that obey the architecture-defined switch boxes and channel widths. Successful routing ensures that all signal paths are physically realizable on the target fabric. After routing, VPR generates detailed timing, area, and wire length reports, which are used for evaluating the effectiveness of the architecture when mapped with a specific benchmark.
+
+This pack, place, and route sequence completes the physical implementation of a benchmark on a given FPGA model, enabling quantitative comparison between architectures under consistent workloads.
+
+\section{Architecture Timing and Area Analysis}
+Once the VPR pack, place, and route stages are completed, the final step in the implementation flow involves analyzing the timing and area characteristics of each benchmark mapped to a target architecture. These metrics are crucial for evaluating architectural suitability in the context of real-world workloads, particularly in latency- or resource-constrained environments such as machine learning accelerators.
+
+VPR automatically generates detailed reports during the post-analysis phase, including metrics such as critical path delay, total wire length, and logic block utilization. These values reflect the overall timing performance and silicon area efficiency of the FPGA implementation. The critical path delay serves as the primary indicator of the maximum achievable clock frequency, while area metrics such as the number of LUTs, flip-flops, and routing channels used help quantify the hardware footprint of each benchmark.
+
+Given the large number of benchmark-architecture pairings, manually parsing each VPR-generated log file for timing and area statistics would be extremely tedious and error-prone. To address this, a set of shell scripts was developed to recursively traverse the benchmark result directories, extract the relevant performance metrics from the VPR output logs, and tabulate them in a structured format. This automation not only accelerated the evaluation process but also ensured consistency and reproducibility across experiments.
+
+Through this scripted post-processing pipeline, comprehensive architectural comparisons were made possible, enabling insights into how each target FPGA configuration—Stratix-10, 4-bit single carry chain, and 4-bit double carry chain—responds to a diverse suite of logic-intensive benchmarks.
+
+\section{Target FPGA Platform for Manojavam}
+The hardware realization of the Manojavam accelerator was implemented on the AMD Artix-7 XC7A35T-CPG236 FPGA, a mid-range device that strikes a practical balance between resource availability, cost-efficiency, and power consumption. As part of the Artix-7 family, this chip offers 33,280 logic cells, 90 DSP slices, 50 BRAM blocks (each 36 Kb), and up to 106 general-purpose I/Os—sufficient to accommodate complex designs involving parallel compute engines, pipelined control, and multi-level memory hierarchies\cite{chap4-1}.
+
+This specific FPGA supports a core voltage of 1.0V and configurable I/O voltages ranging from 1.2V to 3.3V, enabling flexible interfacing and integration with external memory and debug modules.
+
+A key reason behind choosing the XC7A35T was its classification as a mid-tier FPGA platform—not as resource-rich as high-end Virtex or Zynq devices, but still capable of supporting non-trivial, computation-heavy accelerators like Manojavam. Successfully implementing a design of this scale and performance complexity on such a constrained FPGA underscored both the architectural efficiency of the accelerator and the strength of its RTL pipeline design. The ability to achieve high throughput (~2 GOPS) on this device reinforces the viability of deploying Manojavam on cost-sensitive or power-limited platforms in real-world scenarios.
+
+The design was built, simulated, and deployed using AMD Vivado ML Edition 2024.1, which provides an optimized development environment for ML-centric workloads and FPGA-based accelerators. This toolchain offered improved synthesis quality, accurate post-implementation timing analysis, and integrated power estimation—critical for validating the resource and thermal characteristics of the design. Vivado’s hierarchical project structure, IP integration capabilities, and native simulation support enabled modular development of Manojavam’s matrix engine, control hierarchy, and cache system. Additionally, the enhanced DSP inference optimizations in the 2024.1 release helped to better utilize the FPGA’s limited DSP slices in the systolic array implementation.
+
+Overall, the Artix-7 platform served as a compelling testbed, proving that large-scale ML accelerators can be both prototyped and meaningfully evaluated on affordable, mid-class FPGAs.
+
+\section{RTL Entry and Behavioral Simulation}
+The RTL (Register Transfer Level) design of Manojavam was written using Verilog HDL, with a modular structure to represent each functional block of the accelerator. Modules were created for the matrix multiplication engine, systolic arrays, cache subsystems, rotation unit, and controller hierarchy. Each module was kept functionally independent to allow easy debugging, simulation, and reuse. The design followed a top-down integration strategy where smaller blocks were tested individually before being connected together in the top-level module.
+
+For functional verification, behavioral simulation was carried out using the Vivado Simulator. Testbenches were written for each module to verify their input-output behavior. For instance, the matrix multiplication engine was tested using simple matrix tiles, and expected outputs were manually calculated and verified. Similarly, cache controllers were simulated to confirm proper data movement and synchronization between memory levels. All modules were first simulated independently and later tested as part of an integrated top-level simulation.
+
+The goal of this stage was not to optimize timing or synthesis yet, but to ensure that the logic described in Verilog functioned as intended. Waveform viewers in Vivado were used extensively to track signal transitions and debug potential design mismatches. Once behavioral simulation showed correct functionality, the design moved to synthesis and implementation stages.
+
+This simulation-driven approach helped catch errors early and saved time during later stages of the FPGA workflow.
+
+\section{Xilinx Design Constraints}
+Design constraints are a vital part of implementing any FPGA-based system, as they serve to bridge the gap between a functional RTL design and its successful realization on physical hardware. In the context of the Manojavam accelerator, Xilinx Design Constraints (XDC) were used to specify essential aspects of the design such as pin assignments, clock configurations, and layout planning. These constraints helped ensure correct electrical behavior, reliable timing performance, and efficient use of FPGA resources throughout the implementation process.
+
+\subsection{I/O Constraints}
+I/O constraints define how the design’s inputs and outputs are mapped to the physical pins on the FPGA package. For Manojavam, all critical ports—including operand inputs, control signals, and outputs—were carefully assigned to specific pins on the Artix-7 FPGA. Along with pin location, additional attributes like voltage levels, I/O standards, and drive strength were specified to match external components and comply with electrical requirements. These I/O constraints ensured stable communication between the FPGA and its surrounding system environment.
+
+\subsection{Clock Constraints}
+Proper timing behavior is critical in digital systems, making clock constraints one of the most important parts of FPGA implementation. In Manojavam, constraints were used to define the primary system clock, along with its expected period. The design also incorporated timing relationships between the clock and the arrival or departure of data on specific IOs. These constraints enabled Vivado’s synthesis and implementation tools to analyze and optimize the design’s timing paths, ensuring that all internal components operated reliably at the target frequency without timing violations.
+
+\subsection{PBlock Floorplanning Constraints}
+To improve modularity and manage routing congestion, floorplanning constraints were applied using placement blocks, or PBlocks\cite{chap4-2}. These constraints defined specific regions on the FPGA fabric where particular components of the design—such as systolic arrays, cache systems, or controller modules—would be placed. Assigning different parts of the design to dedicated regions reduced routing conflicts and helped achieve better timing closure. PBlocks also provided a clearer physical layout, making the design easier to analyze and debug.
+
+Together, these constraint categories played a crucial role in shaping the final implementation of the Manojavam accelerator. By clearly defining how the design should interface with the FPGA and how it should be arranged internally, the use of design constraints ensured performance consistency, predictable behavior, and a smooth transition from simulation to hardware.
+
+\section{Synthesis}
+Synthesis is a critical phase in FPGA design as it translates high-level RTL code into a gate-level representation compatible with the hardware fabric. For Manojavam, synthesis was performed using the AMD Vivado 2024.1 ML Edition, targeting the Artix-7 xc7a35tcpg236 FPGA. This step maps Verilog constructs to available FPGA primitives such as LUTs, flip-flops, BRAMs, and DSP slices, allowing the design to be implemented on physical silicon. It also provides valuable insight into how efficiently the design utilizes hardware resources, how much power it may consume, and whether it can meet required timing constraints.
+
+\subsection{Post Synthesis Simulations}
+Once synthesis was complete, post-synthesis simulations were performed to validate that the mapped gate-level netlist still preserved functional correctness. These simulations accounted for delays introduced by synthesis optimizations and resource mapping, ensuring no unintended logic behavior had been introduced. The same testbenches from behavioral simulation were reused at this stage, but the simulation now reflected a more realistic, timing-aware model of the hardware. Any mismatches between RTL and post-synthesis behavior were carefully analyzed and fixed before proceeding further.
+
+\subsection{Utilization and Power Reports}
+Vivado’s synthesis process generated detailed utilization reports, summarizing how many LUTs, flip-flops, DSPs, BRAMs, and IOs were consumed. These metrics were critical in understanding the resource footprint of Manojavam’s architecture. In addition, Vivado provided power analysis reports estimating both dynamic and static power consumption. This data helped evaluate the efficiency of the design and highlighted potential hotspots or overuse of resources that could lead to overheating, a known challenge in the earlier iterations of Manojavam.
+
+\subsection{Timing Summaries}
+Finally, timing summaries were reviewed to assess whether the design could operate at the target clock frequency without setup or hold violations. Vivado generated timing analysis results such as Worst Negative Slack (WNS), Total Negative Slack (TNS), and achieved clock frequency. These results determined whether the system was capable of running at its intended performance. For Manojavam, achieving timing closure was essential to maintain high throughput for matrix operations and maintain synchronization across the systolic arrays, cache controllers, and control logic.
+
+\section{Implementation}
+FPGA implementation is the final and critical step that translates a verified RTL design into a physical configuration that can be programmed onto the chip. While synthesis transforms the design into logical primitives, the implementation process performs placement and routing, assigning these primitives to specific physical locations and connecting them via the FPGA’s interconnect. This step ensures that the design meets timing, area, and resource constraints under real-world operating conditions. For a complex architecture like Manojavam, successful implementation is key to achieving predictable performance and energy efficiency on the target Artix-7 FPGA.
+
+\subsection{Post Implementation Simulations}
+After implementation, it is crucial to verify that the placed and routed design maintains its functional correctness and adheres to the expected timing. Post-implementation simulation uses timing-annotated netlists that reflect real propagation delays, allowing accurate observation of timing behavior across all critical paths. In the Manojavam project, these simulations were used to validate the system’s functional performance under timing constraints and to catch any issues not visible during earlier behavioral or post-synthesis simulation stages. This step helped confirm the design’s reliability at its target operational frequency.
+
+\subsection{Utilization and Power Reports}
+Once the design is implemented, Vivado generates detailed reports on FPGA resource usage and power consumption. The utilization report includes information about the number of LUTs, flip-flops, DSP slices, and BRAMs used, which is important for analyzing the efficiency of the hardware architecture. For Manojavam, these insights were particularly useful in evaluating how effectively each subsystem—such as the matrix multiplication engine and memory units—fit into the mid-range Artix-7 FPGA fabric.
+
+Similarly, the power report provides a breakdown of dynamic and static power consumption. This includes contributions from logic, signal transitions, clocking, and IOs. The power analysis helped assess the overall energy profile of the Manojavam accelerator and served as a reference point for identifying hotspots and areas of potential optimization in future iterations of the design.
+
+\section{Openlane ASIC Implementation}
+While the Manojavam accelerator was primarily designed and tested on an FPGA platform, exploring its implementation using an ASIC design flow provides critical insights into its scalability, performance, and suitability for future chip fabrication. OpenLane, an open-source ASIC toolchain built on top of tools like Yosys, OpenROAD, and Magic, offers a fully automated RTL-to-GDSII flow for synthesizing and realizing digital designs in silicon. For Manojavam, the OpenLane flow enabled a practical understanding of area, power, and timing in the context of custom silicon. This ASIC-level evaluation helped analyze how Manojavam might perform in a real-world application-specific integrated circuit environment, offering a glimpse into its potential as a domain-specific ML accelerator chip.
+
+\subsection{Openlane RTL Entry and Configuration File}
+The implementation process begins with the entry of Verilog RTL into the OpenLane flow. The source files describing the Manojavam subsystems—matrix engine, Jacobian unit, memory controllers, etc.—were consolidated and referenced in the configuration file (config.tcl). This file also specifies constraints such as core utilization targets, power strap configurations, and clock characteristics. Ensuring correct RTL setup and configuration was essential for enabling OpenLane to manage synthesis, floorplanning, and the downstream flow stages in a streamlined and automated manner.
+
+\subsection{Integration with SRAM MAcros}
+Since memory forms a critical part of Manojavam's compute engine, SRAM macros were integrated into the OpenLane flow using macro placement definitions. These pre-designed SRAM blocks were treated as hard macros and instantiated in the RTL. Their LEF (Library Exchange Format) files and corresponding Liberty timing models were referenced in the configuration, enabling proper placement and timing analysis. Care was taken to ensure that the SRAM interfaces aligned with the system’s bus protocol and controller logic, allowing seamless memory integration into the physical layout.
+
+\subsection{Floorplanning}
+Floorplanning defines the physical structure of the ASIC design by allocating die area, placing macros, and carving out space for routing channels. In Manojavam’s case, the floorplan was configured to allow sufficient space for the SRAM macros while maintaining a balanced layout for logic blocks. The power distribution network, IO pads, and core utilization were defined early in this stage to ensure a reliable layout foundation. Floorplanning was a key step in managing the complex memory and compute interactions within the chip.
+
+\subsection{Placement}
+During placement, the synthesized standard cells were positioned in legal, optimal locations within the floorplan. OpenLane utilizes OpenROAD’s placer to minimize wirelength and congestion while satisfying design constraints. For Manojavam, correct placement of datapaths such as systolic MAC units and memory controllers was crucial in achieving efficient interconnects and improving timing closure.
+
+\subsection{Clock Tree Synthesis (CTS)}
+Clock Tree Synthesis ensures that clock signals reach all sequential elements with minimal skew and latency. OpenLane's CTS step inserted buffers and generated clock trees to meet the timing requirements defined in the config file. Given the complexity of Manojavam’s parallel datapaths, this step was critical for reducing clock uncertainties and supporting the intended high-frequency operation of the accelerator.
+
+\subsection{Routing}
+Routing connects all standard cells and macros based on the netlist and placement information. OpenLane’s routing engine generated metal layers and vias while adhering to design rules for spacing and density. For Manojavam, this stage ensured signal integrity across compute, control, and memory sections, producing a complete routed layout ready for verification.
+
+\subsection{Signoff}
+Signoff involves final checks before tape-out to validate that the design meets all fabrication constraints. This includes checks for design rule violations (DRC), layout vs. schematic consistency (LVS), and antenna effects. OpenLane’s integration with Magic and Netgen enabled complete signoff for the GDSII layout of Manojavam. Passing these checks provided confidence in the design’s manufacturability and correctness.
+
+\subsection{Analysis and Reports}
+At the end of the OpenLane flow, a set of reports is generated covering area, timing, power, and congestion. These reports helped quantify the ASIC footprint of the Manojavam design. Insights from timing analysis informed critical path bottlenecks, while area reports detailed how efficiently the logic and SRAMs were packed into the die. Power estimation gave a projection of energy efficiency in a silicon implementation, guiding future design decisions for optimizing compute vs. memory tradeoffs.
+
+
+\begin{comment}
+\section{Contents of this chapter}
+This chapter should elaborate the following in detail.
+\begin{enumerate}
+\item Implementation details for hardware based projects
+\item Top level Design for software based projects
+\end{enumerate}
+\end{comment}
+
+\begin{comment}
+You can add sections and sub sections to elaborate your project work done.
+
+\vspace{0.75cm}
+
+ \textbf{The chapters should not end with figures, instead bring the paragraph explaining about the figure at the end followed by a summary paragraph.}
+
+After elaborating the various sections of the chapter (From Chapter 2 onwards), a summary paragraph should be written discussing the highlights of that particular chapter. This summary paragraph should not be numbered separately. This paragraph should connect the present chapter to the next chapter. 
+
+\end{comment}
